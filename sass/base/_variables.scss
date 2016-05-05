@@ -1,0 +1,24 @@
+// -----------------------------------------
+	// Layout Breakpoints
+// -----------------------------------------
+$maxWidth: 860;
+$mobile:600;
+
+
+// -----------------------------------------
+	// Font Sizes
+// -----------------------------------------
+$regularSize: 12;
+
+$green:#42aa56;
+$darkGrey:#4e4e4e;
+$darkerGrey:darken($darkGrey, 20%);
+$greenOpacity:rgba(66, 170, 86, 0.47);
+
+
+// -----------------------------------------
+	// Font Families
+// -----------------------------------------
+$helvetica: Helvetica, Arial, sans-serif;
+$headingFont: 'caviar_dreams_regular', Helvetica, Arial, sans-serif;
+$contentFont: 'andada_regular', Helvetica, Arial, sans-serif;

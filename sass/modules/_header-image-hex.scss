@@ -1,0 +1,24 @@
+// File Name: _header-image-hex.scss
+// Description: header profile image in a hexagon shape
+// Used by: 
+// Dependencies: 
+// Date created: 13/08/2015
+// ------------------------------------------------------------
+
+header{
+  .image{
+    display:block;
+    width:100px;
+    height:100px;
+    background:url(../img/ryan-burgess.jpg) no-repeat;
+    @include retina("../img/ryan-burgess@2x.jpg", 100, 100);
+    @extend %marginAuto;
+    -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background: no-repeat center center; 
+  }
+}

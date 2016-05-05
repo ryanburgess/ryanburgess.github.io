@@ -1,0 +1,41 @@
+// File Name: _social-icons.scss
+// Description: Social media icon links
+// Used by: 
+// Dependencies: 
+// Date created: 16/07/2015
+// ------------------------------------------------------------
+
+.social{
+  position:absolute;
+  right:30px;
+  top:30px;
+
+  li{
+    @extend %inlineBlock;
+    @include rem("margin", 0, 5);
+
+    a{
+      @extend %hideText;
+      width:30px;
+      height:30px;
+
+      @include breakpoint($mobile){
+        width:20px;
+        height:20px;
+      }
+
+      &:hover, &:focus{
+        @include opacity(.5);
+      }
+    }
+    .twitter{
+      content:url(../img/twitter.min.svg);
+    }
+    .github{
+      content:url(../img/github.min.svg);
+    }
+    .linkedin{
+      content:url(../img/linkedin.min.svg);
+    }
+  }
+}

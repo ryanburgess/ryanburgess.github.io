@@ -1,0 +1,26 @@
+// File Name: _header.scss
+// Description: Site header
+// Used by: 
+// Dependencies: 
+// Date created: 16/07/2015
+// ------------------------------------------------------------
+
+header{
+  text-align:center;
+  @include rem("padding-bottom", 30);
+
+  a{
+    text-decoration:none;
+    color:black;
+
+    &:hover, &:focus{
+      color:$darkGrey;
+    }
+  }
+
+  h1{
+    font-family:$headingFont;
+    @include rem("font-size", 32);
+    @include rem("margin", 30, 0, 20, 0);
+  }
+}
