@@ -6,12 +6,13 @@
 // ------------------------------------------------------------
 
 header{
-  text-align:center;
-  @include rem("padding-bottom", 30);
+  color: white;
+  position: relative;
+  z-index: 2;
 
   a{
     text-decoration:none;
-    color:black;
+    color:white;
 
     &:hover, &:focus{
       color:$darkGrey;

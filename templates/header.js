@@ -7,7 +7,7 @@ module.exports = function header(path, title) {
   }
 
   const template = `<header class="row">
-            <a href="/"><h1>${title}</h1><span class="image"></span></a>
+            <a href="/"><h1>${title}</h1></a>
         </header>`;
 
   return template;

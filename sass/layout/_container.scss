@@ -1,9 +1,7 @@
 .container{
-  background:rgba(255,255,255,0.3);
   @include rem("padding", 30);
   @include rem("margin-bottom", 60);
-  @include roundedCorners(10);
-  color:$darkGrey;
+  color: white;
   position: relative;
 
   h2{

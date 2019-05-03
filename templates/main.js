@@ -52,13 +52,10 @@ module.exports = function main(pageType, pageTitle, pageContent) {
       </head>
       <body>
           ${header(path, mainTitle)}
-          <div class="container row">
-            <h2>${sectionTitle}</h2>
-            <div class="content">
-              ${social()}
-              ${pageContent}
-            </div>
+          <div class="row">
+            ${social()}
           </div>
+          <div class="bottom-image"></div>
       </body>
   </html>`;
 };

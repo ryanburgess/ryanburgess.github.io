@@ -6,9 +6,8 @@
 // ------------------------------------------------------------
 
 .social{
-  position:absolute;
-  right:30px;
-  top:30px;
+  position: relative;
+  z-index: 2;
 
   li{
     @extend %inlineBlock;
@@ -36,6 +35,15 @@
     }
     .linkedin{
       content:url(../img/linkedin.min.svg);
+    }
+    .instagram{
+      content:url(../img/instagram.svg);
+    }
+    .flickr{
+      content:url(../img/flickr.svg);
+    }
+    .youtube{
+      content:url(../img/youtube.svg);
     }
   }
 }
