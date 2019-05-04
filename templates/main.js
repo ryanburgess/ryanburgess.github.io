@@ -45,7 +45,7 @@ module.exports = function main(pageType, pageTitle, pageContent) {
           <meta name="description" content="${desc}">
           <meta name="viewport" content="width=device-width">
           <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-          <link rel="icon" href="http://ryanburgess.com/favicon.ico" type="image/x-icon">
+          <link rel="icon" href="https://ryanburgess.com/favicon.ico" type="image/x-icon">
           <link rel="canonical" href="http://ryanburgess.com/">
           <link rel="stylesheet" href="${path}${css}" type="text/css" media="screen">
           ${ga(`${gaCode}`)}
