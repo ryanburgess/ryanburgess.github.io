@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Contact – Ryan Burgess Photography</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="logo">
+    <a href="../">
+      <span class="logo-main">Ryan Burgess</span>
+      <span class="logo-sub">Photography</span>
+    </a>
+  </div>
+
+  <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+  <label for="nav-toggle" class="nav-toggle-label"><span></span></label>
+
+  <nav class="site-nav">
+    <a href="../portfolio/">Portfolio</a>
+    <a href="../store/">Store</a>
+    <a href="../about/">About</a>
+    <a href="../contact/">Contact</a>
+  </nav>
+</header>
+
+<main class="contact-page">
+
+  <section class="page-hero">
+    <div class="page-hero-inner">
+      <h1>Contact</h1>
+      <p>Get in touch for prints, collaborations, or general inquiries.</p>
+    </div>
+  </section>
+
+  <section class="contact-section">
+    <form class="contact-form" action="mailto:burgessdryan@gmail.com" method="post" enctype="text/plain">
+
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" required></textarea>
+
+      <button type="submit" class="btn btn-primary btn-sm">Send Message</button>
+    </form>
+
+    <div class="contact-direct"><p><a href="https://instagram.com/ryan.burgess" target="_blank">Instagram →</a></p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-left">
+    &copy; <span id="year"></span> Ryan Burgess Photography
+  </div>
+  <div class="footer-right">
+    <a href="../store/">Store</a>
+    <a href="../portfolio/">Portfolio</a>
+    <a href="../contact">Contact</a>
+    <a href="https://www.instagram.com/ryan.burgess" target="_blank">Instagram</a>
+  </div>
+</footer>
+
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

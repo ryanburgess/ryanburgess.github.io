@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>About – Ryan Burgess Photography</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="logo">
+    <a href="../">
+      <span class="logo-main">Ryan Burgess</span>
+      <span class="logo-sub">Photography</span>
+    </a>
+  </div>
+
+  <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+  <label for="nav-toggle" class="nav-toggle-label"><span></span></label>
+
+  <nav class="site-nav">
+    <a href="../portfolio/">Portfolio</a>
+    <a href="../store/">Store</a>
+    <a href="../about/">About</a>
+    <a href="../contact/">Contact</a>
+  </nav>
+</header>
+
+<main class="about-page">
+
+  <section class="page-hero">
+    <div class="page-hero-inner">
+      <h1>About</h1>
+      <p>Photographer documenting color, mood, and everyday moments.</p>
+    </div>
+  </section>
+
+  <section class="about-section">
+
+    <div class="about-image">
+      <img src="../images/about-portrait.jpg" alt="Ryan Burgess Portrait">
+    </div>
+
+    <div class="about-text">
+      <h2>Hi, I’m Ryan.</h2>
+      <p>
+        I’m a photographer based in San Francisco, focused on street photography, capturing color,
+        mood, and the details of everyday life. After years working in tech,
+        I stepped back to reconnect with creativity and the city around me —
+        documenting the places, light, and moments.
+      </p>
+
+      <p>
+        My work blends street photography, long-lens cityscapes, portraits,
+        and documentary-style storytelling. I shoot daily, exploring how
+        movement, weather, and color shape the way a city feels.
+      </p>
+
+      <p>
+        You’ll find a mix of my work in my magazines, prints, and ongoing
+        projects across San Francisco.
+      </p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-left">
+    &copy; <span id="year"></span> Ryan Burgess Photography
+  </div>
+  <div class="footer-right">
+    <a href="../store/">Store</a>
+    <a href="../portfolio/">Portfolio</a>
+    <a href="../contact">Contact</a>
+    <a href="https://instagram.com/" target="_blank">Instagram</a>
+  </div>
+</footer>
+
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
