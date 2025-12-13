@@ -476,8 +476,8 @@ main {
   }
 
   .highlight-card {
-    flex-basis: 260px;
-    height: 220px;
+    flex-basis: 300px;
+    height: 350px;
   }
 }
 
