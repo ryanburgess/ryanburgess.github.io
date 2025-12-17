@@ -1,0 +1,13 @@
+{
+  "siteTitle": "Ryan Burgess Photography",
+  "nav": [
+    { "label": "Portfolio", "to": "/portfolio" },
+    { "label": "Store", "to": "/store" },
+    { "label": "About", "to": "/about" },
+    { "label": "Contact", "to": "/contact" }
+  ],
+  "newsletter": {
+    "title": "Get notified about new releases",
+    "body": "Be the first to know when new magazines and print editions go live."
+  }
+}
