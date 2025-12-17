@@ -855,3 +855,146 @@ main {
     font-size: 15px;
   }
 }
+
+.product-card-link {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.product-card-link:hover .product-title {
+  text-decoration: underline;
+  text-decoration-color: rgba(45, 116, 255, 0.7);
+}
+
+@media (min-width: 640px) {
+  .product-card-link {
+    flex-direction: row;
+    align-items: center;
+    gap: 18px;
+  }
+
+  .product-media {
+    flex: 0 0 260px; /* image column */
+  }
+}
+
+/* Store SPA - Product page layout + carousel */
+
+.product-layout {
+  max-width: 960px;
+  margin: 0 auto;
+  display: grid;
+  gap: 24px;
+}
+
+@media (min-width: 900px) {
+  .product-layout {
+    grid-template-columns: 1.2fr 0.8fr;
+    align-items: start;
+  }
+}
+
+.product-gallery-main {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  border-radius: 12px;
+  background-color: #111;
+  background-size: cover;
+  background-position: center;
+  border: 1px solid rgba(255,255,255,0.12);
+  box-shadow: 0 18px 36px rgba(0,0,0,0.45);
+}
+
+.product-gallery-thumbs {
+  display: flex;
+  gap: 10px;
+  margin-top: 12px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+}
+
+.product-thumb {
+  width: 64px;
+  height: 64px;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.12);
+  background-size: cover;
+  background-position: center;
+  background-color: #111;
+  cursor: pointer;
+  opacity: 0.85;
+}
+
+.product-thumb.is-active {
+  border-color: rgba(45,116,255,0.8);
+  opacity: 1;
+}
+
+.product-panel {
+  background: rgba(10,10,10,0.7);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 12px;
+  padding: 18px;
+}
+
+.product-price {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  margin: 10px 0 14px;
+}
+
+.variant-row {
+  display: grid;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.variant-label {
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: rgba(255,255,255,0.7);
+}
+
+.variant-select {
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.2);
+  background: #111;
+  color: #fff;
+  outline: none;
+}
+
+.variant-select:focus {
+  border-color: #2d74ff;
+}
+
+.product-buyrow {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 16px;
+}
+
+.btn.is-disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.trust-row {
+  display: grid;
+  gap: 10px;
+  margin-top: 16px;
+  color: rgba(255,255,255,0.75);
+  font-size: 13px;
+}
+
+.trust-item strong {
+  display: block;
+  color: rgba(255,255,255,0.9);
+  margin-bottom: 2px;
+}

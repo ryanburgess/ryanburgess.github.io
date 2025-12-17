@@ -4,208 +4,27 @@
   <meta charset="UTF-8" />
   <title>Store – Ryan Burgess Photography</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Global site styles -->
   <link rel="stylesheet" href="../style.css" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet" />
 </head>
 <body>
+  <div id="store-root"></div>
 
-  <!-- Header / Navigation -->
-  <header class="site-header">
-    <div class="logo">
-      <a href="../" class="logo-link">
-        <span class="logo-main">Ryan Burgess</span>
-        <span class="logo-sub">Photography</span>
-      </a>
-    </div>
+  <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
 
-    <!-- Mobile nav toggle -->
-    <input type="checkbox" id="nav-toggle" class="nav-toggle" />
-    <label for="nav-toggle" class="nav-toggle-label">
-      <span></span>
-    </label>
+  <!-- React Router DOM UMD (v6) -->
+  <script src="https://unpkg.com/react-router-dom@6/umd/react-router-dom.production.min.js"></script>
 
-    <nav class="site-nav">
-      <a href="../portfolio/">Portfolio</a>
-      <a href="../store/">Store</a>
-      <a href="../about/">About</a>
-      <a href="../contact/">Contact</a>
-    </nav>
-  </header>
+  <!-- Babel (compiles JSX in the browser) -->
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
-  <main class="store-page">
-    <!-- Page Header -->
-    <section class="page-hero page-hero--store">
-      <div class="page-hero-inner">
-        <h1>Store</h1>
-        <p>Magazines and prints featuring color-rich San Francisco and beyond.</p>
-      </div>
-    </section>
-
-    <!-- Magazines Section -->
-    <section class="store-section store-section--magazines">
-      <div class="store-section-header">
-        <div>
-          <h2>Magazines</h2>
-          <p>Photographic stories in print – limited runs and evolving series.</p>
-        </div>
-        <!-- Optional link to full Blurb author store -->
-        <a href="#" class="store-section-link" target="_blank" rel="noopener noreferrer">
-          View all on Blurb &rarr;
-        </a>
-      </div>
-
-      <div class="product-grid product-grid--magazines">
-        <!-- Product card example: SF in Color Vol. 1 -->
-        <article class="product-card">
-          <a href="#" class="product-image-link" target="_blank" rel="noopener noreferrer">
-            <!-- Replace with magazine cover image -->
-            <div class="product-image product-image--magazine"
-                 style="background-image: url('../images/sf-in-color-vol1.jpg');">
-            </div>
-          </a>
-          <div class="product-info">
-            <h3 class="product-title">SF in Color – Volume 1</h3>
-            <p class="product-meta">Softcover / Photography Magazine</p>
-            <p class="product-description">
-              A curated collection of San Francisco in full color – streets, fog, neon, and everyday moments.
-            </p>
-            <div class="product-actions">
-              <a href="#" class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer">
-                Buy on Blurb
-              </a>
-            </div>
-          </div>
-        </article>
-
-        <!-- Future magazine example (placeholder) -->
-        <article class="product-card product-card--placeholder">
-          <div class="product-image product-image--magazine placeholder">
-            <span>Coming Soon</span>
-          </div>
-          <div class="product-info">
-            <h3 class="product-title">SF in Color – Volume 2</h3>
-            <p class="product-meta">In development</p>
-            <p class="product-description">
-              A continuation of the series exploring new corners of the city, color, and light.
-            </p>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <!-- Prints Section -->
-    <section class="store-section store-section--prints">
-      <div class="store-section-header">
-        <div>
-          <h2>Prints</h2>
-          <p>Selected images available as high-quality prints.</p>
-        </div>
-        <!-- Optional link to a Blurb (or lab) gallery for prints -->
-        <a href="#" class="store-section-link" target="_blank" rel="noopener noreferrer">
-          View full print catalog &rarr;
-        </a>
-      </div>
-
-      <div class="product-grid product-grid--prints">
-        <!-- Example print card -->
-        <article class="product-card">
-          <a href="#" class="product-image-link" target="_blank" rel="noopener noreferrer">
-            <!-- Replace with real print image -->
-            <div class="product-image"
-                 style="background-image: url('../images/print-golden-gate.jpg');">
-            </div>
-          </a>
-          <div class="product-info">
-            <h3 class="product-title">Golden Gate in Blue</h3>
-            <p class="product-meta">8×10, 11×14, 16×20</p>
-            <p class="product-description">
-              A long-lens view of the Golden Gate Bridge framed in coastal haze and blue tones.
-            </p>
-            <div class="product-actions">
-              <a href="#" class="btn btn-ghost btn-sm" target="_blank" rel="noopener noreferrer">
-                Buy on Blurb
-              </a>
-            </div>
-          </div>
-        </article>
-
-        <!-- Example print card 2 -->
-        <article class="product-card">
-          <a href="#" class="product-image-link" target="_blank" rel="noopener noreferrer">
-            <div class="product-image"
-                 style="background-image: url('../images/print-bernal-hill.jpg');">
-            </div>
-          </a>
-          <div class="product-info">
-            <h3 class="product-title">Bernal Heights Wind</h3>
-            <p class="product-meta">8×10, 12×18</p>
-            <p class="product-description">
-              A windy day on Bernal Hill – city skyline, birds in the gusts, and SF’s layered horizon.
-            </p>
-            <div class="product-actions">
-              <a href="#" class="btn btn-ghost btn-sm" target="_blank" rel="noopener noreferrer">
-                Buy on Blurb
-              </a>
-            </div>
-          </div>
-        </article>
-
-        <!-- Example print card 3 -->
-        <article class="product-card">
-          <a href="#" class="product-image-link" target="_blank" rel="noopener noreferrer">
-            <div class="product-image"
-                 style="background-image: url('../images/print-street-neon.jpg');">
-            </div>
-          </a>
-          <div class="product-info">
-            <h3 class="product-title">Neon Alley</h3>
-            <p class="product-meta">Limited edition</p>
-            <p class="product-description">
-              A slice of San Francisco at night – neon, reflections, and a single moment in motion.
-            </p>
-            <div class="product-actions">
-              <a href="#" class="btn btn-ghost btn-sm" target="_blank" rel="noopener noreferrer">
-                Buy on Blurb
-              </a>
-            </div>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <!-- Newsletter reuse (optional, consistent with homepage) -->
-    <section class="newsletter">
-      <div class="newsletter-inner">
-        <h2>Get notified about new releases</h2>
-        <p>
-          Be the first to know when new magazines and print editions go live.
-        </p>
-        <form class="newsletter-form">
-          <label class="sr-only" for="email">Email address</label>
-          <input type="email" id="email" name="email" placeholder="Email address" required />
-          <button type="submit">Subscribe</button>
-        </form>
-      </div>
-    </section>
-  </main>
-
-  <!-- Footer -->
-  <footer class="site-footer">
-    <div class="footer-left">
-      <span>&copy; <span id="year"></span> Ryan Burgess Photography</span>
-    </div>
-    <div class="footer-right">
-      <a href="../store/">Store</a>
-      <a href="../portfolio/">Portfolio</a>
-      <a href="../contact">Contact</a>
-      <a href="https://www.instagram.com/ryan.burgess" target="_blank" rel="noopener noreferrer">Instagram</a>
-    </div>
-  </footer>
-
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+  <!-- Your app (loaded as Babel/JSX) -->
+  <script type="text/babel" src="./app.js"></script>
 </body>
 </html>
