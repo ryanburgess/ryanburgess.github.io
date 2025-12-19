@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import Store from "./pages/Store";
 import ProductCatalog from "./pages/ProductCatalog";
 import StoreProduct from "./pages/StoreProduct";
+import Portfolio from "./pages/Portfolio";
 
 export default function App() {
   return (
@@ -16,6 +17,7 @@ export default function App() {
       {/* store subpages */}
       <Route path="/store/:category" element={<ProductCatalog />} />
       <Route path="/store/products/:slug" element={<StoreProduct />} />
+      <Route path="/portfolio" element={<Portfolio />} />
 
       {/* other pages... */}
     </Routes>
