@@ -1,0 +1,178 @@
+{
+  "sections": [
+    {
+  "id": "san-francisco",
+  "title": "San Francisco",
+  "items": [
+        {
+        "id": "sf-005",
+        "src": "/images/portfolio/san-francisco/sf-005.jpg",
+        "alt": "The vertical Castro Theatre marquee rising against a clear blue sky in San Francisco.",
+        "caption": "Castro Lines"
+        },
+        {
+        "id": "sf-006",
+        "src": "/images/portfolio/san-francisco/sf-006.jpg",
+        "alt": "A bold rainbow-striped mural filling the frame with clean geometric color bands.",
+        "caption": "Color Wall"
+        },
+        {
+        "id": "sf-001",
+        "src": "/images/portfolio/san-francisco/sf-001.jpg",
+        "alt": "A red fire engine parked on a San Francisco street with the Transamerica Pyramid in the background.",
+        "caption": "Fire + Pyramid"
+        },
+        {
+        "id": "sf-003",
+        "src": "/images/portfolio/san-francisco/sf-003.jpg",
+        "alt": "A classic carousel in Golden Gate Park with ornate painted details and warm afternoon light.",
+        "caption": "Golden Gate Carousel"
+        },
+        {
+        "id": "sf-016",
+        "src": "/images/portfolio/san-francisco/sf-016.jpg",
+        "alt": "A red arrow sculpture against a bright blue sky with curved yellow architectural shapes.",
+        "caption": "Pointed Sky"
+        },
+        {
+        "id": "sf-015",
+        "src": "/images/portfolio/san-francisco/sf-015.jpg",
+        "alt": "A sharply dressed person in a bright purple suit walking through a sunny city intersection.",
+        "caption": "Purple Walk"
+        },
+        {
+        "id": "sf-009",
+        "src": "/images/portfolio/san-francisco/sf-009.jpg",
+        "alt": "A motorcycle rider passing a colorful mural-covered building in San Francisco.",
+        "caption": "Rolling Past Art"
+        },
+        {
+        "id": "sf-018",
+        "src": "/images/portfolio/san-francisco/sf-018.jpg",
+        "alt": "A cyclist in a red jacket riding past the Palace of Fine Arts on a bright day.",
+        "caption": "Palace Cruise"
+        },
+        {
+        "id": "sf-013",
+        "src": "/images/portfolio/san-francisco/sf-013.jpg",
+        "alt": "A person sitting on a bench near the waterfront with bridge lines and open sky behind them.",
+        "caption": "Quiet on the Bay"
+        },
+        {
+        "id": "sf-007",
+        "src": "/images/portfolio/san-francisco/sf-007.jpg",
+        "alt": "A San Francisco skyline view with the Transamerica Pyramid rising above the city.",
+        "caption": "City Spine"
+        },
+        {
+        "id": "sf-014",
+        "src": "/images/portfolio/san-francisco/sf-014.jpg",
+        "alt": "A silhouetted figure walking through a glass-fronted terminal with soft purple-blue tones.",
+        "caption": "Terminal Glow"
+        },
+        {
+        "id": "sf-004",
+        "src": "/images/portfolio/san-francisco/sf-004.jpg",
+        "alt": "Yellow flowers in the foreground with a sunlit building and palm trees softly out of focus behind.",
+        "caption": "Soft California"
+        }
+    ]
+    },
+    {
+        "id": "tokyo",
+        "title": "Tokyo",
+        "items": [
+            {
+            "id": "tokyo-001",
+            "src": "/images/portfolio/tokyo/tokyo-001.jpg",
+            "alt": "A child in a red shirt riding down a glowing escalator tunnel in Tokyo.",
+            "caption": "Downward Light"
+            },
+            {
+            "id": "tokyo-002",
+            "src": "/images/portfolio/tokyo/tokyo-002.jpg",
+            "alt": "A busy Tokyo street at night beneath a red illuminated gate and neon signage.",
+            "caption": "Electric Entrance"
+            },
+            {
+            "id": "tokyo-006",
+            "src": "/images/portfolio/tokyo/tokyo-006.jpg",
+            "alt": "Crowds moving through a neon-lit Tokyo street at night with signs glowing overhead.",
+            "caption": "Neon Current"
+            },
+            {
+            "id": "tokyo-005",
+            "src": "/images/portfolio/tokyo/tokyo-005.jpg",
+            "alt": "A Tokyo taxi parked at night with reflections of city lights on its windshield.",
+            "caption": "Waiting Fare"
+            },
+            {
+            "id": "tokyo-004",
+            "src": "/images/portfolio/tokyo/tokyo-004.jpg",
+            "alt": "A chef working inside a small Tokyo kitchen with warm light and hanging tools.",
+            "caption": "Quiet Craft"
+            },
+            {
+            "id": "tokyo-003",
+            "src": "/images/portfolio/tokyo/tokyo-003.jpg",
+            "alt": "A traditional five-story pagoda standing beneath a clear blue sky in Tokyo.",
+            "caption": "Still Center"
+            }
+        ]
+    },
+    {
+        "id": "osaka",
+        "title": "Osaka",
+        "items": [
+            {
+            "id": "osaka-003",
+            "src": "/images/portfolio/osaka/osaka-003.jpg",
+            "alt": "A lantern-lit storefront at night in Osaka with a motorcycle parked out front.",
+            "caption": "After Hours"
+            },
+            {
+            "id": "osaka-005",
+            "src": "/images/portfolio/osaka/osaka-005.jpg",
+            "alt": "A quiet Osaka storefront at night illuminated by a single red lantern.",
+            "caption": "Last Light"
+            },
+            {
+            "id": "osaka-008",
+            "src": "/images/portfolio/osaka/osaka-008.jpg",
+            "alt": "A narrow stone alley in Osaka lit by lanterns and early evening light.",
+            "caption": "Stone Path"
+            },
+            {
+            "id": "osaka-007",
+            "src": "/images/portfolio/osaka/osaka-007.jpg",
+            "alt": "A woman walking past a restaurant in Osaka, partially blurred by motion.",
+            "caption": "Passing Through"
+            },
+            {
+            "id": "osaka-006",
+            "src": "/images/portfolio/osaka/osaka-006.jpg",
+            "alt": "A man walking past a seafood shop on a busy Osaka street during the day.",
+            "caption": "Street Rhythm"
+            },
+            {
+            "id": "osaka-001",
+            "src": "/images/portfolio/osaka/osaka-001.jpg",
+            "alt": "A performer in a yellow jacket framed by colorful signage in Osaka.",
+            "caption": "Neon Character"
+            },
+            {
+            "id": "osaka-002",
+            "src": "/images/portfolio/osaka/osaka-002.jpg",
+            "alt": "Brightly colored industrial details and signage in an Osaka alley.",
+            "caption": "Hard Color"
+            },
+            {
+            "id": "osaka-009",
+            "src": "/images/portfolio/osaka/osaka-009.jpg",
+            "alt": "A bold pink storefront with lanterns and signage in Osaka.",
+            "caption": "Pink District"
+            }
+        ]
+        }
+  ]
+}

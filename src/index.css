@@ -1353,3 +1353,9 @@ main {
   border-color: rgba(45,116,255,0.8);
   color: #fff;
 }
+
+.portfolio-tile {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}

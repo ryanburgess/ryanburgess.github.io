@@ -17,9 +17,6 @@ export default function Contact() {
               <p>
                 For inquiries, collaborations, licensing, or print questions — send a note.
               </p>
-              <p>
-                Or email directly: <a href="mailto:ryan@ryanburgess.com">ryan@ryanburgess.com</a>
-              </p>
               <p className="muted" style={{ marginTop: 18 }}>
                 Typical reply time: 1–2 days.
               </p>
