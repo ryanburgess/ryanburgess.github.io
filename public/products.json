@@ -12,19 +12,19 @@
       "sku": "SFC-V1",
       "featured": true,
       "featuredOrder": 1,
-      "priceFrom": 24.99,
+      "priceFrom": 30.00,
       "currency": "USD",
       "shortDescription": "A curated collection of San Francisco in full color – streets, fog, neon, and everyday moments.",
-      "longDescription": "Longer editorial description here…",
+      "longDescription": "A vivid, 58-page, 8×10 street photography magazine capturing bold color, local culture, and the raw energy of San Francisco. Printed on premium paper.",
       "images": [
-        "/images/sf-in-color-vol1.jpg"
+        "/images/store/magazines/sf-in-color-1.jpg"
       ],
       "variants": [
         {
           "id": "softcover",
           "label": "Softcover",
-          "price": 24.99,
-          "buyUrl": "https://www.blurb.com/your-product-link-softcover"
+          "price": 30.00,
+          "buyUrl": "https://www.blurb.com/b/12670583-sf-in-color-issue-1"
         }
       ],
       "tags": ["San Francisco", "Color", "Magazine"]
