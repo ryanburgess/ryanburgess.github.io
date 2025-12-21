@@ -1359,3 +1359,25 @@ main {
   background-position: center;
   background-repeat: no-repeat;
 }
+
+.about-page {
+  padding: 80px 24px 120px;
+}
+
+.about-inner {
+  max-width: 720px;       /* key change */
+  margin: 0 auto;
+  display: grid;
+  gap: 28px;
+}
+
+.about-inner h1,
+.about-inner h2 {
+  margin: 0;
+}
+
+.about-inner p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.8);
+}
