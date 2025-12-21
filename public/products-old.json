@@ -28,6 +28,23 @@
         }
       ],
       "tags": ["San Francisco", "Color", "Magazine"]
+    },
+    {
+      "id": "golden-gate-in-blue",
+      "type": "print",
+      "title": "Golden Gate in Blue",
+      "slug": "golden-gate-in-blue",
+      "sku": "PRINT-GGB-001",
+      "featured": true,
+      "featuredOrder": 2,
+      "priceFrom": 39.0,
+      "currency": "USD",
+      "shortDescription": "A long-lens view of the Golden Gate Bridge framed in coastal haze and blue tones.",
+      "images": ["/images/print-golden-gate.jpg"],
+      "variants": [
+        { "id": "8x10", "label": "8×10", "price": 39.0, "buyUrl": "https://..." }
+      ],
+      "tags": ["Golden Gate", "Telephoto", "Blue"]
     }
   ]
 }
