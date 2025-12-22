@@ -7,7 +7,7 @@ import StoreProduct from "./pages/StoreProduct";
 import Portfolio from "./pages/Portfolio";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
-import ContactThanks from "./pages/ContactThanks";
+import Thanks from "./pages/Thanks";
 
 export default function App() {
   return (
@@ -26,7 +26,7 @@ export default function App() {
       <Route path="/portfolio" element={<Portfolio />} />
       <Route path="/about" element={<About />} />
       <Route path="/contact" element={<Contact />} />
-      <Route path="/contact/thanks" element={<ContactThanks />} />
+      <Route path="/contact/thanks" element={<Thanks />} />
     </Routes>
   );
 }
