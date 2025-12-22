@@ -10,6 +10,7 @@ export default function SiteFooter() {
       <div className="footer-right">
         <a href="/store">Store</a>
         <a href="/portfolio">Portfolio</a>
+        <a href="/contact">Contact</a>
         <a href="https://www.instagram.com/ryan.burgess" target="_blank" rel="noopener noreferrer">
           Instagram
         </a>

@@ -27,6 +27,7 @@ export default function Contact() {
               name="contact"
               method="POST"
               data-netlify="true"
+              netlify
               data-netlify-honeypot="bot-field"
               action="/contact/thanks"
             >
