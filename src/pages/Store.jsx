@@ -77,7 +77,7 @@ export default function Store() {
       <section className="page-hero">
         <div className="page-hero-inner">
           <h1>Store</h1>
-          <p>Magazines and prints featuring color-rich San Francisco.</p>
+          <p>Magazines and prints featuring color-rich photography.</p>
         </div>
       </section>
 
