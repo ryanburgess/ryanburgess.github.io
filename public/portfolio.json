@@ -1,6 +1,78 @@
 {
   "sections": [
     {
+  "id": "los-angeles",
+  "title": "Los Angeles",
+  "items": [
+    {
+      "id": "la-001",
+      "src": "/images/portfolio/los-angeles/la-001.jpg",
+      "alt": "Santa Monica Pier entrance sign with palm trees",
+      "caption": "Santa Monica Pier"
+    },
+    {
+      "id": "la-002",
+      "src": "/images/portfolio/los-angeles/la-002.jpg",
+      "alt": "Blue archway on Santa Monica Pier boardwalk",
+      "caption": "Pier Geometry"
+    },
+    {
+      "id": "la-003",
+      "src": "/images/portfolio/los-angeles/la-003.jpg",
+      "alt": "Woman standing at the end of Santa Monica Pier",
+      "caption": "Edge of the Pacific"
+    },
+    {
+      "id": "la-004",
+      "src": "/images/portfolio/los-angeles/la-004.jpg",
+      "alt": "Bright roller coaster at Pacific Park",
+      "caption": "Pacific Park"
+    },
+    {
+      "id": "la-005",
+      "src": "/images/portfolio/los-angeles/la-005.jpg",
+      "alt": "Red statue on Rodeo Drive",
+      "caption": "Red Photographer"
+    },
+    {
+      "id": "la-006",
+      "src": "/images/portfolio/los-angeles/la-006.jpg",
+      "alt": "Man in red holding a red umbrella",
+      "caption": "Umbrella in Red"
+    },
+    {
+      "id": "la-007",
+      "src": "/images/portfolio/los-angeles/la-007.jpg",
+      "alt": "Tattoo display on Venice Beach boardwalk",
+      "caption": "Venice Ink"
+    },
+    {
+      "id": "la-009",
+      "src": "/images/portfolio/los-angeles/la-009.jpg",
+      "alt": "Yellow Ferarri under palm trees in Los Angeles",
+      "caption": "Ferarri on Rodeo Drive"
+    },
+    {
+      "id": "la-010",
+      "src": "/images/portfolio/los-angeles/la-010.jpg",
+      "alt": "Colorful food stand on Santa Monica Pier",
+      "caption": "Boardwalk Stand"
+    },
+    {
+      "id": "la-012",
+      "src": "/images/portfolio/los-angeles/la-012.jpg",
+      "alt": "Churros stand on Santa Monica Pier",
+      "caption": "Churros"
+    },
+    {
+      "id": "la-013",
+      "src": "/images/portfolio/los-angeles/la-013.jpg",
+      "alt": "Ferris wheel framed by roller coaster tracks",
+      "caption": "Ferris Wheel Framed"
+    }
+  ]
+},
+    {
   "id": "san-francisco",
   "title": "San Francisco",
   "items": [
