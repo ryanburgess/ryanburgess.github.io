@@ -96,6 +96,40 @@
         { "id": "8x10", "label": "8×10", "price": 24.99, "buyUrl": "https://buy.stripe.com/5kQ00j4wt8oA9bo1NQgA802" }
       ],
       "tags": ["San Francisco", "haight"]
+    },
+    {
+      "id": "chrissy-field",
+      "type": "print",
+      "title": "Chrissy Field",
+      "slug": "chrissy-field",
+      "sku": "PRINT-chrissy-006",
+      "featured": true,
+      "featuredOrder": 4,
+      "priceFrom": 24.99,
+      "currency": "USD",
+      "shortDescription": "This is a print captured at Chrissy Field in San Francisco.",
+      "images": ["/images/store/prints/chrissy-field.jpg"],
+      "variants": [
+        { "id": "8x10", "label": "8×10", "price": 24.99, "buyUrl": "https://buy.stripe.com/00wbJ1bYV20cafs9gigA805" }
+      ],
+      "tags": ["San Francisco", "chrissy field"]
+    },
+    {
+      "id": "rainbow-school",
+      "type": "print",
+      "title": "Rainbow School",
+      "slug": "rainbow-school",
+      "sku": "PRINT-rainbow-school-007",
+      "featured": true,
+      "featuredOrder": 4,
+      "priceFrom": 24.99,
+      "currency": "USD",
+      "shortDescription": "Rainbow School is a print captured in the Mission of San Francisco.",
+      "images": ["/images/store/prints/rainbow-school.jpg"],
+      "variants": [
+        { "id": "8x10", "label": "8×10", "price": 24.99, "buyUrl": "https://buy.stripe.com/eVqdR9fb7bAM2N00JMgA806" }
+      ],
+      "tags": ["San Francisco", "chrissy field"]
     }
   ]
 }
