@@ -47,13 +47,30 @@
       "tags": ["San Francisco"]
     },
     {
+      "id": "rodeo-ferrari",
+      "type": "print",
+      "title": "Rodeo Ferrari",
+      "slug": "rodeo-ferrari",
+      "sku": "PRINT-ferrari-004",
+      "featured": true,
+      "featuredOrder": 1,
+      "priceFrom": 24.99,
+      "currency": "USD",
+      "shortDescription": "Rodeo Ferrari is a print captured on Rodeo Drive in Beverly Hills.",
+      "images": ["/images/store/prints/rodeo-ferrari.jpg"],
+      "variants": [
+        { "id": "8x10", "label": "8×10", "price": 24.99, "buyUrl": "https://buy.stripe.com/bJeeVdgfb7kw0ESboqgA804" }
+      ],
+      "tags": ["San Francisco"]
+    },
+    {
       "id": "tunes-by-the-bay",
       "type": "print",
       "title": "Tunes by the Bay",
       "slug": "tunes-by-the-bay",
       "sku": "PRINT-tbb-001",
       "featured": true,
-      "featuredOrder": 2,
+      "featuredOrder": 3,
       "priceFrom": 24.99,
       "currency": "USD",
       "shortDescription": "Tunes by the Bay is a print captured along the San Francisco waterfront.",
@@ -70,7 +87,7 @@
       "slug": "hendrix-on-haight",
       "sku": "PRINT-hendrix-002",
       "featured": true,
-      "featuredOrder": 2,
+      "featuredOrder": 4,
       "priceFrom": 24.99,
       "currency": "USD",
       "shortDescription": "Hendrix on Haight Street is a print captured on Haight Street in San Francisco.",
