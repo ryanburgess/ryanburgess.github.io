@@ -30,6 +30,23 @@
       "tags": ["San Francisco", "Color", "Magazine"]
     },
     {
+      "id": "arrow",
+      "type": "print",
+      "title": "Arrow",
+      "slug": "arrow",
+      "sku": "PRINT-arrow-003",
+      "featured": true,
+      "featuredOrder": 1,
+      "priceFrom": 24.99,
+      "currency": "USD",
+      "shortDescription": "Arrow is a print captured on the Embarcadero in San Francisco.",
+      "images": ["/images/store/prints/arrow.jpg"],
+      "variants": [
+        { "id": "8x10", "label": "8×10", "price": 24.99, "buyUrl": "https://buy.stripe.com/14A8wP0gdeMY4V8646gA803" }
+      ],
+      "tags": ["San Francisco"]
+    },
+    {
       "id": "tunes-by-the-bay",
       "type": "print",
       "title": "Tunes by the Bay",
