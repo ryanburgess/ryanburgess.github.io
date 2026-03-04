@@ -28,6 +28,40 @@
         }
       ],
       "tags": ["San Francisco", "Color", "Magazine"]
+    },
+    {
+      "id": "tunes-by-the-bay",
+      "type": "print",
+      "title": "Tunes by the Bay",
+      "slug": "tunes-by-the-bay",
+      "sku": "PRINT-tbb-001",
+      "featured": true,
+      "featuredOrder": 2,
+      "priceFrom": 24.99,
+      "currency": "USD",
+      "shortDescription": "Tunes by the Bay is a print captured along the San Francisco waterfront.",
+      "images": ["/images/store/prints/music-bay.jpg"],
+      "variants": [
+        { "id": "8x10", "label": "8×10", "price": 24.99, "buyUrl": "https://buy.stripe.com/14A3cv8MJ8oA4V80JMgA801" }
+      ],
+      "tags": ["San Francisco"]
+    },
+    {
+      "id": "hendrix-on-haight",
+      "type": "print",
+      "title": "Hendrix on Haight Street",
+      "slug": "hendrix-on-haight",
+      "sku": "PRINT-hendrix-002",
+      "featured": true,
+      "featuredOrder": 2,
+      "priceFrom": 24.99,
+      "currency": "USD",
+      "shortDescription": "Hendrix on Haight Street is a print captured on Haight Street in San Francisco.",
+      "images": ["/images/store/prints/hendrix-haight.jpg"],
+      "variants": [
+        { "id": "8x10", "label": "8×10", "price": 24.99, "buyUrl": "https://buy.stripe.com/5kQ00j4wt8oA9bo1NQgA802" }
+      ],
+      "tags": ["San Francisco", "haight"]
     }
   ]
 }
