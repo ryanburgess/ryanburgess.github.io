@@ -40,7 +40,7 @@ export default function Home() {
             role="img"
             aria-label="Portrait of Ryan holding a camera"
             style={{
-              backgroundImage: 'url("/images/hero/ryan-hero.jpg")',
+              backgroundImage: 'url("/images/hero/ryan-hero.png")',
             }}
           />
         </div>
