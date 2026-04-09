@@ -130,6 +130,23 @@
         { "id": "8x10", "label": "8×10", "price": 24.99, "buyUrl": "https://buy.stripe.com/eVqdR9fb7bAM2N00JMgA806" }
       ],
       "tags": ["San Francisco", "chrissy field"]
+    },
+    {
+      "id": "blue-orange",
+      "type": "print",
+      "title": "Blue and Orange",
+      "slug": "blue-orange",
+      "sku": "PRINT-blue-orange-008",
+      "featured": true,
+      "featuredOrder": 4,
+      "priceFrom": 20.00,
+      "currency": "USD",
+      "shortDescription": "Blue and Orange shapes.",
+      "images": ["/images/store/prints/blue-orange.jpg"],
+      "variants": [
+        { "id": "8x10", "label": "8×10", "price": 20.00, "buyUrl": "https://buy.stripe.com/4gM9AT0gdgV62N08cegA807" }
+      ],
+      "tags": ["Studio City", "color", "shapes", "los angeles"]
     }
   ]
 }
