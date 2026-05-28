@@ -30,6 +30,31 @@
       "tags": ["San Francisco", "Color", "Magazine"]
     },
     {
+      "id": "la-in-color-vol-1",
+      "type": "magazine",
+      "title": "LA in Color – Volume 1",
+      "slug": "la-in-color-vol-1",
+      "sku": "LAC-V1",
+      "featured": true,
+      "featuredOrder": 1,
+      "priceFrom": 32.00,
+      "currency": "USD",
+      "shortDescription": "A bold exploration of Los Angeles through color, architecture, movement, and everyday moments.",
+      "longDescription": "A bold 41-page, 8×10 photography magazine documenting my exploration of Los Angeles through color, architecture, and movement after moving from San Francisco to LA. Thoughtfully sequenced and printed on premium paper.",
+      "images": [
+        "/images/store/magazines/la-in-color-1.jpg"
+      ],
+      "variants": [
+        {
+          "id": "softcover",
+          "label": "Softcover",
+          "price": 32.00,
+          "buyUrl": "https://www.blurb.com/b/12883533-la-in-color-vol-1"
+        }
+      ],
+      "tags": ["los angeles", "Color", "Magazine"]
+    },
+    {
       "id": "arrow",
       "type": "print",
       "title": "Arrow",
