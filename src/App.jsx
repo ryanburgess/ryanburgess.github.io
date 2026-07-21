@@ -8,6 +8,8 @@ import Portfolio from "./pages/Portfolio";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Thanks from "./pages/Thanks";
+import Resources from "./pages/Resources";
+import ResourceDetail from "./pages/ResourceDetail";
 
 export default function App() {
   return (
@@ -24,6 +26,8 @@ export default function App() {
 
       {/* other pages... */}
       <Route path="/portfolio" element={<Portfolio />} />
+      <Route path="/resources" element={<Resources />} />
+      <Route path="/resources/:slug" element={<ResourceDetail />} />
       <Route path="/about" element={<About />} />
       <Route path="/contact" element={<Contact />} />
       <Route path="/contact/thanks" element={<Thanks />} />

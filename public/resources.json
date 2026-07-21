@@ -1,0 +1,76 @@
+{
+  "resources": [
+    {
+      "slug": "finding-color-in-the-city",
+      "title": "Finding Color in the City",
+      "category": "Field Notes",
+      "readTime": "5 min read",
+      "excerpt": "A practical way to notice, frame, and layer color while photographing everyday city life.",
+      "image": "/images/portfolio/portfolio-2.jpg",
+      "imageAlt": "Bright color and geometry in a Los Angeles street scene",
+      "imageCaption": "Los Angeles — color becomes the subject when you give it room to lead.",
+      "introduction": [
+        "Color is often the first thing that stops me on a walk. It can turn an ordinary corner into a photograph, create a visual rhythm, or connect people to the space around them.",
+        "The goal is not to chase every bright surface. It is to recognize when color is doing meaningful work inside the frame."
+      ],
+      "sections": [
+        {
+          "heading": "Start with one anchor color",
+          "paragraphs": ["Choose one color in the scene and let it organize the frame. A painted wall, a jacket, or a small sign can give your eye a place to land."],
+          "points": ["Look for repetition across the foreground and background.", "Move until distracting colors fall outside the frame.", "Wait for a person or gesture to complete the composition."]
+        },
+        {
+          "heading": "Use light to simplify",
+          "paragraphs": ["Strong light separates colors and creates useful blocks of shadow. Overcast light is quieter, but it can reveal subtler combinations and hold detail across the whole scene."]
+        }
+      ],
+      "takeaways": ["Pick one dominant color.", "Check every edge of the frame.", "Let the moment come to your composition."]
+    },
+    {
+      "slug": "street-photography-walking-practice",
+      "title": "Build a Better Photo Walk",
+      "category": "Practice",
+      "readTime": "4 min read",
+      "excerpt": "A simple, repeatable practice for staying observant and returning home with more intentional frames.",
+      "image": "/images/portfolio/portfolio-4.jpg",
+      "imageAlt": "A candid urban photograph made during a photo walk",
+      "imageCaption": "A good walk is measured in attention, not distance.",
+      "introduction": ["A photo walk works best when it has enough structure to focus your attention and enough freedom to follow surprise."],
+      "sections": [
+        {
+          "heading": "Set one constraint",
+          "paragraphs": ["Before leaving, choose a small assignment: photograph only at intersections, follow one color, use one focal length, or stay within six blocks."],
+          "points": ["Keep the constraint simple.", "Walk the same route more than once.", "Review for patterns, not just favorites."]
+        },
+        {
+          "heading": "Slow down before moving on",
+          "paragraphs": ["When a background has potential, stay with it. Make a clean frame first, then wait to see what people, light, or motion add to it."]
+        }
+      ],
+      "takeaways": ["One walk, one constraint.", "Work promising scenes longer.", "Edit after some distance from the shoot."]
+    },
+    {
+      "slug": "editing-a-photo-series",
+      "title": "Editing a Cohesive Photo Series",
+      "category": "Editing",
+      "readTime": "6 min read",
+      "excerpt": "Move beyond selecting single favorites and shape a group of photographs with rhythm, contrast, and purpose.",
+      "image": "/images/portfolio/portfolio-6.jpg",
+      "imageAlt": "A colorful photograph selected for a cohesive series",
+      "imageCaption": "A series creates meaning between photographs, not only within them.",
+      "introduction": ["Editing a series asks a different question than choosing your best individual photographs. The strongest image is not always the one the sequence needs."],
+      "sections": [
+        {
+          "heading": "Make a generous first edit",
+          "paragraphs": ["Pull every photograph that speaks to the idea, feeling, place, or visual language of the project. Then look for recurring gestures and relationships."],
+          "points": ["Print small thumbnails or use a broad grid view.", "Remove duplicate ideas before weaker photographs.", "Notice how your eye moves from frame to frame."]
+        },
+        {
+          "heading": "Build rhythm with contrast",
+          "paragraphs": ["Alternate dense and quiet compositions, wide scenes and details, or stillness and motion. Variety gives each image space while a consistent visual language holds the work together."]
+        }
+      ],
+      "takeaways": ["Edit for the whole, not the hero image.", "Sequence with visual echoes.", "End before the idea feels exhausted."]
+    }
+  ]
+}
