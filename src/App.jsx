@@ -11,6 +11,7 @@ import Thanks from "./pages/Thanks";
 import Resources from "./pages/Resources";
 import ResourceDetail from "./pages/ResourceDetail";
 import ColorExposureCheatSheet from "./pages/ColorExposureCheatSheet";
+import PhotographyResources from "./pages/PhotographyResources";
 
 export default function App() {
   return (
@@ -28,6 +29,7 @@ export default function App() {
       {/* other pages... */}
       <Route path="/portfolio" element={<Portfolio />} />
       <Route path="/resources" element={<Resources />} />
+      <Route path="/resources/photography" element={<PhotographyResources />} />
       <Route path="/resources/:slug" element={<ResourceDetail />} />
       <Route path="/guides/color-cheat-sheet" element={<ColorExposureCheatSheet />} />
       <Route path="/about" element={<About />} />

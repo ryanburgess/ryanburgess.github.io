@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "categories": [
+    { "id": "cameras-gear", "label": "Cameras & Gear" },
+    { "id": "lenses", "label": "Lenses" },
+    { "id": "lighting", "label": "Lighting" },
+    { "id": "exposure", "label": "Exposure" },
+    { "id": "composition", "label": "Composition" },
+    { "id": "color", "label": "Color" },
+    { "id": "street-photography", "label": "Street Photography" },
+    { "id": "portrait-photography", "label": "Portrait Photography" },
+    { "id": "editing-workflow", "label": "Editing & Workflow" },
+    { "id": "business-career", "label": "Business & Career" }
+  ]
+}

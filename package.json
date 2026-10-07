@@ -5,8 +5,12 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "prebuild": "node scripts/sync-photography-resources.mjs && node scripts/validate-photography-resources.mjs",
     "build": "vite build",
     "lint": "eslint .",
+    "test": "node --test",
+    "validate:resources": "node scripts/validate-photography-resources.mjs",
+    "sync:resources": "node scripts/sync-photography-resources.mjs",
     "preview": "vite preview"
   },
   "engines": {

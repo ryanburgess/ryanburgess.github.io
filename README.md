@@ -1,16 +1,27 @@
-# React + Vite
+# Ryan Burgess Photography
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+React and Vite website for Ryan Burgess Photography, deployed with Netlify.
 
-Currently, two official plugins are available:
+## Local development
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+```bash
+npm install
+npm run dev
+```
 
-## React Compiler
+Useful checks:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+```bash
+npm test
+npm run lint
+npm run build
+```
 
-## Expanding the ESLint configuration
+## Photography resources
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+The website includes two distinct resource systems:
+
+- Authored guides at `/resources` and `/resources/:slug`, backed by `public/resources.json`.
+- The curated external-link collection at `/resources/photography`, backed by the build snapshot in `src/data/photography-resources`.
+
+The two data sources intentionally remain separate. See [Photography resource operations](docs/photography-resources.md) for the contract, source synchronization, submission workflow, and required Netlify/GitHub configuration.
