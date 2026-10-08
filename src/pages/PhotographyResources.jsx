@@ -81,6 +81,7 @@ export default function PhotographyResources() {
   const [errors, setErrors] = useState({});
   const [turnstileToken, setTurnstileToken] = useState("");
   const [submission, setSubmission] = useState({ status: "idle", message: "", prUrl: "" });
+  const notesWordCount = form.notes.trim() ? form.notes.trim().split(/\s+/).length : 0;
 
   useEffect(() => {
     const controller = new AbortController();
@@ -166,7 +167,8 @@ export default function PhotographyResources() {
         <div className="page-hero-inner">
           <span className="resource-eyebrow">Community collection</span>
           <h1>Photography Resources</h1>
-          <p>Useful tools, references, and learning materials for photographers—reviewed before they are added.</p>
+          <p>Useful tools, references, and learning materials for photographers.</p>
+          <a className="photography-resources-cta" href="#contribute-resources">Contribute resources</a>
         </div>
       </section>
 
@@ -233,7 +235,7 @@ export default function PhotographyResources() {
         </div>
       </section>
 
-      <section className="photography-submit-section" aria-labelledby="submit-resource-title">
+      <section id="contribute-resources" className="photography-submit-section" aria-labelledby="submit-resource-title">
         <div className="photography-submit-inner">
           <div className="photography-submit-copy">
             <span className="resource-eyebrow">Share something useful</span>
@@ -276,11 +278,11 @@ export default function PhotographyResources() {
             </div>
 
             <div className="field">
-              <label htmlFor="resource-notes">Why is it useful? <span className="optional-label">Optional</span></label>
-              <textarea id="resource-notes" value={form.notes} onChange={updateField("notes")} maxLength="500" placeholder="A short, factual description for reviewers" aria-invalid={Boolean(errors.notes)} aria-describedby="resource-notes-help" />
+              <label htmlFor="resource-notes">Why do you recommend it? <span aria-hidden="true">*</span></label>
+              <textarea id="resource-notes" value={form.notes} onChange={updateField("notes")} minLength="5" maxLength="500" required placeholder="Write at least 5 words about why this resource is useful" aria-invalid={Boolean(errors.notes)} aria-describedby="resource-notes-help" />
               <div className="field-help-row" id="resource-notes-help">
-                <span className={errors.notes ? "field-error" : undefined}>{errors.notes || "Please avoid firsthand claims unless they are your own."}</span>
-                <span>{form.notes.length}/500</span>
+                <span className={errors.notes ? "field-error" : undefined}>{errors.notes || "At least 5 words are required. Please avoid firsthand claims unless they are your own."}</span>
+                <span>{notesWordCount} words · {form.notes.length}/500</span>
               </div>
             </div>
 

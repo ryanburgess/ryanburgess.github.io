@@ -4,7 +4,7 @@ import {
   findDuplicateResource,
   normalizeResourceUrl,
   validateResourceCollection,
-  validateResourceInput,
+  validateResourceSubmission,
 } from "../../shared/photography-resources-contract";
 
 const PHOTOGRAPHY_RESOURCES_SOURCE = "https://raw.githubusercontent.com/ryanburgess/photography-resources/main";
@@ -39,7 +39,7 @@ export async function fetchPhotographyResources({ signal } = {}) {
 }
 
 export function validatePhotographyResource(input, categories = photographyResourceCategories) {
-  return validateResourceInput(input, categories);
+  return validateResourceSubmission(input, categories);
 }
 
 export function findApprovedDuplicate(url, resources = approvedPhotographyResources) {

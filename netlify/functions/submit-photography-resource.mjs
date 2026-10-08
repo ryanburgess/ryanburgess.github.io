@@ -5,7 +5,7 @@ import {
   findDuplicateResource,
   generatePhotographyResourcesReadme,
   validateResourceCollection,
-  validateResourceInput,
+  validateResourceSubmission,
 } from "../../shared/photography-resources-contract.js";
 
 const API_VERSION = "2026-03-10";
@@ -145,7 +145,7 @@ export function createSubmissionHandler({ fetchImpl = fetch, env = process.env }
       return json(202, { message: "Thanks—your resource is awaiting review." });
     }
 
-    const validation = validateResourceInput(payload, categoriesSnapshot.categories);
+    const validation = validateResourceSubmission(payload, categoriesSnapshot.categories);
     if (!validation.valid) return json(422, { message: "Please correct the highlighted fields.", errors: validation.errors });
 
     const challengeIsValid = await verifyTurnstile({
@@ -174,7 +174,7 @@ export function createSubmissionHandler({ fetchImpl = fetch, env = process.env }
       ]);
       const categories = categoryItems(JSON.parse(decodeContent(categoryFile.content)));
       const approvedResources = resourceItems(JSON.parse(decodeContent(resourceFile.content)));
-      const serverValidation = validateResourceInput(validation.value, categories);
+      const serverValidation = validateResourceSubmission(validation.value, categories);
       if (!serverValidation.valid) return json(422, { message: "Please correct the highlighted fields.", errors: serverValidation.errors });
 
       const approvedDuplicate = findDuplicateResource(approvedResources, serverValidation.value.url);

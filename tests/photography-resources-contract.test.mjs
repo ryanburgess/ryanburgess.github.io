@@ -8,6 +8,7 @@ import {
   normalizeResourceUrl,
   validateResourceCollection,
   validateResourceInput,
+  validateResourceSubmission,
 } from "../shared/photography-resources-contract.js";
 
 const categories = categoriesData.categories;
@@ -24,6 +25,11 @@ test("rejects blank, unknown, and unsafe inputs", () => {
   assert.equal(validateResourceInput({ category: "", title: " ", url: "javascript:alert(1)" }, categories).valid, false);
   assert.equal(validateResourceInput({ ...validInput, category: "unknown" }, categories).errors.category, "Choose a recognized category.");
   assert.equal(validateResourceInput({ ...validInput, title: "Unsafe\nheading" }, categories).errors.title, "Title contains unsupported characters.");
+});
+
+test("requires a five-word recommendation for submissions", () => {
+  assert.equal(validateResourceSubmission({ ...validInput, notes: "Too few words here" }, categories).valid, false);
+  assert.equal(validateResourceSubmission({ ...validInput, notes: "This resource offers clear practical guidance" }, categories).valid, true);
 });
 
 test("URL normalization preserves path case and meaningful query parameters", () => {

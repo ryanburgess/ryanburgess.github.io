@@ -3,7 +3,7 @@ import assert from "node:assert/strict";
 import { createHash } from "node:crypto";
 import { createSubmissionHandler } from "../netlify/functions/submit-photography-resource.mjs";
 
-const payload = { category: "books", title: "Useful Guide", url: "https://example.com/guide", notes: "Helpful notes.", website: "" };
+const payload = { category: "books", title: "Useful Guide", url: "https://example.com/guide", notes: "Helpful guidance for learning photography fundamentals.", website: "" };
 const key = "12345678-1234-1234-1234-123456789012";
 
 function request(body = payload, headers = {}) {
@@ -23,6 +23,14 @@ test("returns inline validation errors before contacting GitHub", async () => {
   let calls = 0;
   const response = await createSubmissionHandler({ env: { PHOTOGRAPHY_SUBMISSIONS_ENABLED: "true" }, fetchImpl: async () => { calls += 1; } })(request({ ...payload, url: "file:///tmp/private" }));
   assert.equal(response.status, 422);
+  assert.equal(calls, 0);
+});
+
+test("requires a thoughtful description before contacting GitHub", async () => {
+  let calls = 0;
+  const response = await createSubmissionHandler({ env: { PHOTOGRAPHY_SUBMISSIONS_ENABLED: "true" }, fetchImpl: async () => { calls += 1; } })(request({ ...payload, notes: "Not enough words" }));
+  assert.equal(response.status, 422);
+  assert.equal((await response.json()).errors.notes, "Write at least 5 words explaining why you recommend this resource.");
   assert.equal(calls, 0);
 });
 

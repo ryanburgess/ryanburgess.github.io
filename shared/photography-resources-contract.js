@@ -5,6 +5,7 @@ export const RESOURCE_LIMITS = Object.freeze({
   title: 120,
   url: 2048,
   notes: 500,
+  notesMinWords: 5,
 });
 
 function cleanString(value) {
@@ -56,6 +57,21 @@ export function validateResourceInput(input, categories) {
     errors,
     value: { ...value, url: normalizeResourceUrl(value.url) || value.url },
   };
+}
+
+export function countResourceWords(value) {
+  return cleanString(value).split(/\s+/).filter(Boolean).length;
+}
+
+export function validateResourceSubmission(input, categories) {
+  const result = validateResourceInput(input, categories);
+  const errors = { ...result.errors };
+
+  if (countResourceWords(result.value.notes) < RESOURCE_LIMITS.notesMinWords) {
+    errors.notes = `Write at least ${RESOURCE_LIMITS.notesMinWords} words explaining why you recommend this resource.`;
+  }
+
+  return { ...result, valid: Object.keys(errors).length === 0, errors };
 }
 
 export function findDuplicateResource(resources, url) {

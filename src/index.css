@@ -2004,6 +2004,34 @@ main {
   max-width: 1040px;
 }
 
+.photography-resources-cta {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 20px;
+  padding: 11px 16px;
+  border: 1px solid var(--blue);
+  border-radius: 8px;
+  background: var(--blue);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: background 0.15s ease, border-color 0.15s ease, transform 0.15s ease;
+}
+
+.photography-resources-cta:hover,
+.photography-resources-cta:focus-visible {
+  border-color: #5c94ff;
+  background: #3f81ff;
+  transform: translateY(-1px);
+}
+
+#contribute-resources {
+  scroll-margin-top: 72px;
+}
+
 .photography-library,
 .photography-submit-section {
   padding: 38px 16px 64px;
