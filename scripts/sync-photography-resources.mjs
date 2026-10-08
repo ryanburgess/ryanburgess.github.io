@@ -32,14 +32,16 @@ async function fetchFile(path) {
   return response.json();
 }
 
-const [categories, resources] = await Promise.all([fetchFile("categories.json"), fetchFile("resources.json")]);
-resources.sourceCommit = commitSha;
-const validation = validateResourceCollection(resources, categories.categories);
+const [categorySource, resourceSource] = await Promise.all([fetchFile("categories.json"), fetchFile("resources.json")]);
+const categories = Array.isArray(categorySource) ? categorySource : categorySource.categories;
+const resourceItems = Array.isArray(resourceSource) ? resourceSource : resourceSource.resources;
+const resources = { version: 1, sourceCommit: commitSha, resources: resourceItems };
+const validation = validateResourceCollection(resources, categories);
 if (!validation.valid) throw new Error(`Fetched photography resources are invalid:\n- ${validation.errors.join("\n- ")}`);
 
 const dataDirectory = new URL("../src/data/photography-resources/", import.meta.url);
 await Promise.all([
-  writeFile(new URL("categories.json", dataDirectory), `${JSON.stringify(categories, null, 2)}\n`),
+  writeFile(new URL("categories.json", dataDirectory), `${JSON.stringify({ version: 1, categories }, null, 2)}\n`),
   writeFile(new URL("resources.json", dataDirectory), `${JSON.stringify(resources, null, 2)}\n`),
 ]);
 console.log(`Bundled ${resources.resources.length} photography resources from ${repository}@${commitSha}.`);

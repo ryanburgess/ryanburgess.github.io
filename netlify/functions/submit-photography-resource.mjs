@@ -45,6 +45,14 @@ function makeBranchName(idempotencyKey) {
   return `${BRANCH_PREFIX}${digest}`;
 }
 
+function categoryItems(data) {
+  return Array.isArray(data) ? data : data?.categories || [];
+}
+
+function resourceItems(data) {
+  return Array.isArray(data) ? data : data?.resources || [];
+}
+
 async function verifyTurnstile({ secret, token, ip, fetchImpl }) {
   if (!secret) return true;
   if (!token) return false;
@@ -164,12 +172,12 @@ export function createSubmissionHandler({ fetchImpl = fetch, env = process.env }
         github.getFile(CATEGORY_PATH, baseBranch),
         github.getFile(RESOURCE_PATH, baseBranch),
       ]);
-      const categories = JSON.parse(decodeContent(categoryFile.content)).categories;
-      const approved = JSON.parse(decodeContent(resourceFile.content));
+      const categories = categoryItems(JSON.parse(decodeContent(categoryFile.content)));
+      const approvedResources = resourceItems(JSON.parse(decodeContent(resourceFile.content)));
       const serverValidation = validateResourceInput(validation.value, categories);
       if (!serverValidation.valid) return json(422, { message: "Please correct the highlighted fields.", errors: serverValidation.errors });
 
-      const approvedDuplicate = findDuplicateResource(approved.resources, serverValidation.value.url);
+      const approvedDuplicate = findDuplicateResource(approvedResources, serverValidation.value.url);
       if (approvedDuplicate) return json(409, { message: "This URL is already in the approved collection.", errors: { url: "This URL is already approved." } });
 
       const pendingDuplicate = await findPendingDuplicate(github, serverValidation.value.url);
@@ -185,20 +193,20 @@ export function createSubmissionHandler({ fetchImpl = fetch, env = process.env }
       }
 
       const branchResourceFile = await github.getFile(RESOURCE_PATH, branchName);
-      const nextData = JSON.parse(decodeContent(branchResourceFile.content));
-      if (!findDuplicateResource(nextData.resources, serverValidation.value.url)) {
-        nextData.resources.push({
+      const nextResources = resourceItems(JSON.parse(decodeContent(branchResourceFile.content)));
+      if (!findDuplicateResource(nextResources, serverValidation.value.url)) {
+        nextResources.push({
           id: createResourceId(serverValidation.value.title, serverValidation.value.url),
           ...serverValidation.value,
         });
       }
-      nextData.resources.sort((a, b) => a.title.localeCompare(b.title));
-      const collectionValidation = validateResourceCollection(nextData, categories);
+      nextResources.sort((a, b) => a.title.localeCompare(b.title));
+      const collectionValidation = validateResourceCollection({ version: 1, resources: nextResources }, categories);
       if (!collectionValidation.valid) throw new Error(`Generated collection is invalid: ${collectionValidation.errors.join(" ")}`);
 
       await github.putFile(RESOURCE_PATH, {
         message: `Add resource: ${serverValidation.value.title}`,
-        content: encodeContent(`${JSON.stringify(nextData, null, 2)}\n`),
+        content: encodeContent(`${JSON.stringify(nextResources, null, 2)}\n`),
         branch: branchName,
         sha: branchResourceFile.sha,
       });
@@ -211,7 +219,7 @@ export function createSubmissionHandler({ fetchImpl = fetch, env = process.env }
       }
       await github.putFile(README_PATH, {
         message: "Regenerate photography resources README",
-        content: encodeContent(generatePhotographyResourcesReadme({ categories, resources: nextData.resources })),
+        content: encodeContent(generatePhotographyResourcesReadme({ categories, resources: nextResources })),
         branch: branchName,
         ...(readmeFile?.sha ? { sha: readmeFile.sha } : {}),
       });

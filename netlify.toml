@@ -2,6 +2,11 @@
   command = "npm run build"
   publish = "dist"
 
+[build.environment]
+  NODE_VERSION = "22.12.0"
+  PHOTOGRAPHY_RESOURCES_SOURCE_REPOSITORY = "ryanburgess/photography-resources"
+  PHOTOGRAPHY_RESOURCES_SOURCE_REF = "main"
+
 [[redirects]]
   from = "/*"
   to = "/index.html"

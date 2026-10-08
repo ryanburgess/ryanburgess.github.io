@@ -3,7 +3,7 @@ import assert from "node:assert/strict";
 import { createHash } from "node:crypto";
 import { createSubmissionHandler } from "../netlify/functions/submit-photography-resource.mjs";
 
-const payload = { category: "cameras-gear", title: "Useful Guide", url: "https://example.com/guide", notes: "Helpful notes.", website: "" };
+const payload = { category: "books", title: "Useful Guide", url: "https://example.com/guide", notes: "Helpful notes.", website: "" };
 const key = "12345678-1234-1234-1234-123456789012";
 
 function request(body = payload, headers = {}) {

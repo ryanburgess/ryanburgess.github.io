@@ -1,15 +1,49 @@
 {
   "version": 1,
   "categories": [
-    { "id": "cameras-gear", "label": "Cameras & Gear" },
-    { "id": "lenses", "label": "Lenses" },
-    { "id": "lighting", "label": "Lighting" },
-    { "id": "exposure", "label": "Exposure" },
-    { "id": "composition", "label": "Composition" },
-    { "id": "color", "label": "Color" },
-    { "id": "street-photography", "label": "Street Photography" },
-    { "id": "portrait-photography", "label": "Portrait Photography" },
-    { "id": "editing-workflow", "label": "Editing & Workflow" },
-    { "id": "business-career", "label": "Business & Career" }
+    {
+      "id": "courses",
+      "label": "Courses"
+    },
+    {
+      "id": "mentoring-and-workshops",
+      "label": "Mentoring and workshops"
+    },
+    {
+      "id": "books",
+      "label": "Books"
+    },
+    {
+      "id": "photo-books",
+      "label": "Photo books"
+    },
+    {
+      "id": "videos",
+      "label": "Videos"
+    },
+    {
+      "id": "podcasts",
+      "label": "Podcasts"
+    },
+    {
+      "id": "articles",
+      "label": "Articles"
+    },
+    {
+      "id": "newsletters",
+      "label": "Newsletters"
+    },
+    {
+      "id": "communities",
+      "label": "Communities"
+    },
+    {
+      "id": "tools",
+      "label": "Tools"
+    },
+    {
+      "id": "photographers-and-inspiration",
+      "label": "Photographers and inspiration"
+    }
   ]
 }
