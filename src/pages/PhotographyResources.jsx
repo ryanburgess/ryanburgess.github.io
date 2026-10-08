@@ -170,13 +170,9 @@ export default function PhotographyResources() {
         </div>
       </section>
 
-      <section className="photography-library" aria-labelledby="photography-library-title">
+      <section className="photography-library" aria-label="Photography resource collection">
         <div className="photography-library-inner">
-          <div className="photography-library-heading">
-            <div>
-              <span className="resource-eyebrow">Browse the collection</span>
-              <h2 id="photography-library-title">All approved resources</h2>
-            </div>
+          <div className="photography-resource-summary">
             <span className="photography-resource-count">
               {filteredResources.length} {filteredResources.length === 1 ? "resource" : "resources"}
             </span>
