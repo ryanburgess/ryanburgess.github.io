@@ -2113,14 +2113,79 @@ main {
 
 .photography-link-meta {
   display: flex;
-  justify-content: space-between;
   gap: 12px;
 }
 
-.photography-link-meta span:last-child {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+.photography-category-badge {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  padding: 5px 8px;
+  border: 1px solid rgba(105, 164, 255, 0.34);
+  border-radius: 5px;
+  background: rgba(45, 116, 255, 0.16);
+  color: #a9c8ff;
+  line-height: 1;
+}
+
+.photography-category-badge[data-category="mentoring-and-workshops"] {
+  border-color: rgba(176, 125, 255, 0.34);
+  background: rgba(137, 75, 230, 0.16);
+  color: #d1b6ff;
+}
+
+.photography-category-badge[data-category="books"] {
+  border-color: rgba(255, 191, 92, 0.34);
+  background: rgba(215, 139, 23, 0.16);
+  color: #ffd18a;
+}
+
+.photography-category-badge[data-category="photo-books"] {
+  border-color: rgba(255, 123, 158, 0.34);
+  background: rgba(219, 60, 103, 0.16);
+  color: #ffabc2;
+}
+
+.photography-category-badge[data-category="videos"] {
+  border-color: rgba(255, 105, 105, 0.34);
+  background: rgba(222, 55, 55, 0.16);
+  color: #ffaaaa;
+}
+
+.photography-category-badge[data-category="podcasts"] {
+  border-color: rgba(195, 119, 255, 0.34);
+  background: rgba(154, 65, 224, 0.16);
+  color: #d9a6ff;
+}
+
+.photography-category-badge[data-category="articles"] {
+  border-color: rgba(83, 213, 255, 0.34);
+  background: rgba(29, 160, 205, 0.16);
+  color: #9be5ff;
+}
+
+.photography-category-badge[data-category="newsletters"] {
+  border-color: rgba(73, 221, 198, 0.34);
+  background: rgba(25, 169, 146, 0.16);
+  color: #91ecdd;
+}
+
+.photography-category-badge[data-category="communities"] {
+  border-color: rgba(105, 218, 125, 0.34);
+  background: rgba(51, 166, 72, 0.16);
+  color: #a7eeb4;
+}
+
+.photography-category-badge[data-category="tools"] {
+  border-color: rgba(255, 151, 84, 0.34);
+  background: rgba(221, 101, 22, 0.16);
+  color: #ffbd91;
+}
+
+.photography-category-badge[data-category="photographers-and-inspiration"] {
+  border-color: rgba(236, 113, 212, 0.34);
+  background: rgba(194, 55, 167, 0.16);
+  color: #f3a6e5;
 }
 
 .photography-link-card h2 {

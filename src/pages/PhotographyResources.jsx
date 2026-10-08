@@ -55,17 +55,10 @@ function TurnstileChallenge({ onToken }) {
 }
 
 function ResourceLinkCard({ resource, categoryLabel }) {
-  let hostname = "";
-  try {
-    hostname = new URL(resource.url).hostname.replace(/^www\./, "");
-  } catch {
-    hostname = resource.url;
-  }
   return (
     <article className="photography-link-card">
       <div className="photography-link-meta">
-        <span>{categoryLabel}</span>
-        <span>{hostname}</span>
+        <span className="photography-category-badge" data-category={resource.category}>{categoryLabel}</span>
       </div>
       <h2>{resource.title}</h2>
       {resource.notes ? <p>{resource.notes}</p> : null}
