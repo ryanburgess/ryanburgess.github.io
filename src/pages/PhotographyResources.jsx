@@ -2,6 +2,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import SiteLayout from "../layout/SiteLayout";
 import {
   approvedPhotographyResources,
+  fetchPhotographyResources,
   findApprovedDuplicate,
   photographyResourceCategories,
   validatePhotographyResource,
@@ -60,7 +61,6 @@ function ResourceLinkCard({ resource, categoryLabel }) {
   } catch {
     hostname = resource.url;
   }
-
   return (
     <article className="photography-link-card">
       <div className="photography-link-meta">
@@ -77,6 +77,11 @@ function ResourceLinkCard({ resource, categoryLabel }) {
 }
 
 export default function PhotographyResources() {
+  const [resourceCollection, setResourceCollection] = useState({
+    categories: photographyResourceCategories,
+    resources: approvedPhotographyResources,
+  });
+  const [resourceLoadStatus, setResourceLoadStatus] = useState("loading");
   const [search, setSearch] = useState("");
   const [category, setCategory] = useState("all");
   const [form, setForm] = useState(emptyForm);
@@ -84,20 +89,39 @@ export default function PhotographyResources() {
   const [turnstileToken, setTurnstileToken] = useState("");
   const [submission, setSubmission] = useState({ status: "idle", message: "", prUrl: "" });
 
+  useEffect(() => {
+    const controller = new AbortController();
+
+    fetchPhotographyResources({ signal: controller.signal })
+      .then((collection) => {
+        setResourceCollection(collection);
+        setResourceLoadStatus("live");
+      })
+      .catch((error) => {
+        if (error.name === "AbortError") return;
+        console.warn("Using the bundled photography resource snapshot.", error);
+        setResourceLoadStatus("fallback");
+      });
+
+    return () => controller.abort();
+  }, []);
+
+  const { categories, resources } = resourceCollection;
+
   const categoryLabels = useMemo(
-    () => Object.fromEntries(photographyResourceCategories.map((item) => [item.id, item.label])),
-    []
+    () => Object.fromEntries(categories.map((item) => [item.id, item.label])),
+    [categories]
   );
 
   const filteredResources = useMemo(() => {
     const query = search.trim().toLowerCase();
-    return approvedPhotographyResources.filter((resource) => {
+    return resources.filter((resource) => {
       const matchesCategory = category === "all" || resource.category === category;
       const matchesSearch = !query || [resource.title, resource.notes, resource.url, categoryLabels[resource.category]]
         .some((value) => String(value || "").toLowerCase().includes(query));
       return matchesCategory && matchesSearch;
     });
-  }, [category, categoryLabels, search]);
+  }, [category, categoryLabels, resources, search]);
 
   const updateField = (field) => (event) => {
     setForm((current) => ({ ...current, [field]: event.target.value }));
@@ -107,8 +131,8 @@ export default function PhotographyResources() {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    const result = validatePhotographyResource(form);
-    const duplicate = findApprovedDuplicate(result.value.url);
+    const result = validatePhotographyResource(form, categories);
+    const duplicate = findApprovedDuplicate(result.value.url, resources);
 
     if (!result.valid || duplicate) {
       setErrors({ ...result.errors, ...(duplicate ? { url: "This URL is already in the approved collection." } : {}) });
@@ -165,6 +189,12 @@ export default function PhotographyResources() {
             </span>
           </div>
 
+          {resourceLoadStatus === "fallback" ? (
+            <p className="photography-resource-sync-status" role="status">
+              Live updates are temporarily unavailable. Showing the most recently saved collection.
+            </p>
+          ) : null}
+
           <div className="photography-resource-tools" role="search">
             <div className="photography-resource-field">
               <label htmlFor="resource-search">Search</label>
@@ -180,7 +210,7 @@ export default function PhotographyResources() {
               <label htmlFor="resource-category-filter">Category</label>
               <select id="resource-category-filter" value={category} onChange={(event) => setCategory(event.target.value)}>
                 <option value="all">All categories</option>
-                {photographyResourceCategories.map((item) => (
+                {categories.map((item) => (
                   <option value={item.id} key={item.id}>{item.label}</option>
                 ))}
               </select>
@@ -200,13 +230,13 @@ export default function PhotographyResources() {
           ) : (
             <div className="photography-resource-empty">
               <span aria-hidden="true">◎</span>
-              <h3>{approvedPhotographyResources.length ? "No matching resources" : "The collection is just getting started"}</h3>
+              <h3>{resources.length ? "No matching resources" : "The collection is just getting started"}</h3>
               <p>
-                {approvedPhotographyResources.length
+                {resources.length
                   ? "Try a different search or category."
                   : "Approved resources will appear here as they are added. Know a useful one? Submit the first recommendation below."}
               </p>
-              {approvedPhotographyResources.length ? (
+              {resources.length ? (
                 <button type="button" onClick={() => { setSearch(""); setCategory("all"); }}>Clear filters</button>
               ) : null}
             </div>
@@ -237,7 +267,7 @@ export default function PhotographyResources() {
               <label htmlFor="resource-category">Category <span aria-hidden="true">*</span></label>
               <select id="resource-category" value={form.category} onChange={updateField("category")} aria-invalid={Boolean(errors.category)} aria-describedby={errors.category ? "resource-category-error" : undefined}>
                 <option value="">Choose a category</option>
-                {photographyResourceCategories.map((item) => (
+                {categories.map((item) => (
                   <option value={item.id} key={item.id}>{item.label}</option>
                 ))}
               </select>

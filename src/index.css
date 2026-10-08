@@ -2038,6 +2038,13 @@ main {
   background: rgba(255, 255, 255, 0.025);
 }
 
+.photography-resource-sync-status {
+  margin: -8px 0 22px;
+  color: rgba(255, 255, 255, 0.56);
+  font-size: 12px;
+  line-height: 1.6;
+}
+
 .photography-resource-field,
 .photography-submit-form .field {
   display: grid;

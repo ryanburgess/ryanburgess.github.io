@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "prebuild": "node scripts/sync-photography-resources.mjs && node scripts/validate-photography-resources.mjs",
+    "prebuild": "node scripts/validate-photography-resources.mjs",
     "build": "vite build",
     "lint": "eslint .",
     "test": "node --test",
