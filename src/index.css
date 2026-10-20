@@ -1105,7 +1105,7 @@ main {
 }
 
 .home-hero-inner {
-  max-width: 1120px;
+  max-width: 1240px;
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -1114,19 +1114,19 @@ main {
 }
 
 .home-hero-copy {
-  flex: 1;
-  min-width: 320px;
+  flex: 1 1 0;
+  min-width: 0;
 }
 
 .home-brand-lockup {
   display: flex;
   align-items: center;
-  gap: clamp(14px, 2.4vw, 26px);
+  gap: clamp(14px, 2vw, 24px);
   margin-bottom: 18px;
 }
 
 .home-brand-mark {
-  width: clamp(70px, 10vw, 112px);
+  width: clamp(70px, 8vw, 100px);
   height: auto;
   flex: 0 0 auto;
 }
@@ -1141,7 +1141,7 @@ main {
 .home-title-line {
   display: block;
   font-weight: 800;
-  font-size: clamp(40px, 5vw, 64px);
+  font-size: clamp(40px, 4.5vw, 64px);
   color: #fff;
 }
 

@@ -31,7 +31,7 @@ export default function Home() {
               </h1>
             </div>
 
-            <p className="home-subtitle">San Francisco based photographer.</p>
+            <p className="home-subtitle">Los Angeles based photographer.</p>
 
             <div className="home-hero-actions">
               <Link className="btn btn-primary" to="/store">
