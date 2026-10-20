@@ -13,6 +13,7 @@ import Resources from "./pages/Resources";
 import ResourceDetail from "./pages/ResourceDetail";
 import ColorExposureCheatSheet from "./pages/ColorExposureCheatSheet";
 import PhotographyResources from "./pages/PhotographyResources";
+import { SimpleSunsetPrivacy, SimpleSunsetTerms } from "./pages/SimpleSunsetLegal";
 
 export default function App() {
   return (
@@ -37,6 +38,8 @@ export default function App() {
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/contact/thanks" element={<Thanks />} />
+        <Route path="/simple-sunset/privacy" element={<SimpleSunsetPrivacy />} />
+        <Route path="/simple-sunset/terms" element={<SimpleSunsetTerms />} />
       </Routes>
     </>
   );
