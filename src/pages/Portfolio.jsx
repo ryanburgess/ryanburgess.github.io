@@ -1,3 +1,4 @@
+import PageHeading from "../components/PageHeading";
 import SiteLayout from "../layout/SiteLayout";
 import { useEffect, useMemo, useState } from "react";
 
@@ -54,8 +55,10 @@ export default function Portfolio() {
     <SiteLayout>
       <section className="page-hero">
         <div className="page-hero-inner">
-          <h1>Portfolio</h1>
-          <p>Selected work by city — street, light, color, and everyday moments.</p>
+          <PageHeading>
+            <h1>Portfolio</h1>
+            <p>Selected work by city — street, light, color, and everyday moments.</p>
+          </PageHeading>
         </div>
       </section>
 

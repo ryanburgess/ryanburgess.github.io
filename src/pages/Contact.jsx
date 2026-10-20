@@ -1,3 +1,4 @@
+import PageHeading from "../components/PageHeading";
 import SiteLayout from "../layout/SiteLayout";
 
 export default function Contact() {
@@ -5,13 +6,15 @@ export default function Contact() {
     <SiteLayout>
       <section className="page-hero">
         <div className="page-hero-inner">
-          <h1>Contact</h1>
-          <p>For inquiries, collaborations, or print questions.</p>
+          <PageHeading>
+            <h1>Contact</h1>
+            <p>For inquiries, collaborations, or print questions.</p>
+          </PageHeading>
         </div>
       </section>
 
       <section className="page-content">
-        <div className="content-inner">
+        <div className="content-inner contact-section">
           <div className="contact-grid">
             <div className="contact-copy">
               <p>

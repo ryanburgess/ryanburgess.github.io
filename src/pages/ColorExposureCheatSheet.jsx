@@ -1,3 +1,4 @@
+import PageHeading from "../components/PageHeading";
 import { useEffect } from "react";
 import SiteLayout from "../layout/SiteLayout";
 
@@ -19,7 +20,7 @@ export default function ColorExposureCheatSheet() {
         <div className="guide-download-inner">
           <div className="guide-download-copy">
             <span className="guide-download-kicker">Free photography guide</span>
-            <h1>Color Exposure Cheat Sheet</h1>
+            <PageHeading><h1>Color Exposure Cheat Sheet</h1></PageHeading>
             <p className="guide-download-lede">
               A quick field reference for adjusting exposure when different colors fill your frame.
               Save it to your phone and keep it close while you shoot.

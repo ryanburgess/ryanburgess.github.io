@@ -1,3 +1,4 @@
+import PageHeading from "../components/PageHeading";
 import { useEffect } from "react";
 import SiteLayout from "../layout/SiteLayout";
 
@@ -18,7 +19,7 @@ function LegalPage({ title, children }) {
     <SiteLayout showNewsletter={false}>
       <section className="legal-hero"><div className="legal-container">
         <span className="legal-product-name">Simple Sunset</span>
-        <h1>{title}</h1>
+        <PageHeading><h1>{title}</h1></PageHeading>
         <p>Effective date: {effectiveDate}</p>
       </div></section>
       <section className="legal-page"><article className="legal-container legal-content">{children}</article></section>

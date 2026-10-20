@@ -2,6 +2,7 @@ import { Routes, Route } from "react-router-dom";
 
 import GoogleAnalytics from "./components/GoogleAnalytics";
 import Home from "./pages/Home";
+import SimpleSunset from "./pages/SimpleSunset";
 import Store from "./pages/Store";
 import ProductCatalog from "./pages/ProductCatalog";
 import StoreProduct from "./pages/StoreProduct";
@@ -38,6 +39,7 @@ export default function App() {
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/contact/thanks" element={<Thanks />} />
+        <Route path="/apps/simple-sunset" element={<SimpleSunset />} />
         <Route path="/simple-sunset/privacy" element={<SimpleSunsetPrivacy />} />
         <Route path="/simple-sunset/terms" element={<SimpleSunsetTerms />} />
       </Routes>

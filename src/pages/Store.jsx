@@ -1,3 +1,4 @@
+import PageHeading from "../components/PageHeading";
 import SiteLayout from "../layout/SiteLayout";
 import { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
@@ -76,8 +77,10 @@ export default function Store() {
     <SiteLayout>
       <section className="page-hero">
         <div className="page-hero-inner">
-          <h1>Store</h1>
-          <p>Magazines and prints featuring color-rich photography.</p>
+          <PageHeading>
+            <h1>Store</h1>
+            <p>Magazines and prints featuring color-rich photography.</p>
+          </PageHeading>
         </div>
       </section>
 

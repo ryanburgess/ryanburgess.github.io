@@ -1,3 +1,4 @@
+import PageHeading from "../components/PageHeading";
 import { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import SiteLayout from "../layout/SiteLayout";
@@ -31,9 +32,11 @@ export default function Resources() {
     <SiteLayout>
       <section className="page-hero resources-hero">
         <div className="page-hero-inner">
-          <span className="resource-eyebrow">Learn &amp; explore</span>
-          <h1>Resources</h1>
-          <p>Photography resources I’ve put together to help other photographers learn, create, and grow.</p>
+          <PageHeading>
+            <span className="resource-eyebrow">Learn &amp; explore</span>
+            <h1>Resources</h1>
+            <p>Photography resources I’ve put together to help other photographers learn, create, and grow.</p>
+          </PageHeading>
         </div>
       </section>
 

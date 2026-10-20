@@ -1,3 +1,4 @@
+import PageHeading from "../components/PageHeading";
 import SiteLayout from "../layout/SiteLayout";
 import { useEffect, useMemo, useState } from "react";
 import { Link, useParams } from "react-router-dom";
@@ -11,8 +12,6 @@ function formatMoney(amount, currency = "USD") {
 export default function StoreProduct() {
   const { slug } = useParams();
   const [state, setState] = useState({ status: "loading", products: [], error: null });
-  const [activeIdx, setActiveIdx] = useState(0);
-  const [variantId, setVariantId] = useState("");
 
   useEffect(() => {
     let alive = true;
@@ -36,19 +35,6 @@ export default function StoreProduct() {
     if (state.status !== "ready") return null;
     return state.products.find((p) => p.slug === slug || p.id === slug) || null;
   }, [state.status, state.products, slug]);
-
-  useEffect(() => {
-    if (!product) return;
-    setActiveIdx(0);
-    const firstVariant = product.variants?.[0];
-    setVariantId(firstVariant?.id || "");
-  }, [product]);
-
-  const variants = product?.variants || [];
-  const selectedVariant = variants.find((v) => v.id === variantId) || variants[0] || null;
-
-  const images = product?.images?.length ? product.images : [];
-  const activeImage = images[activeIdx] || images[0] || "";
 
   if (state.status === "loading") {
     return (
@@ -80,12 +66,25 @@ export default function StoreProduct() {
     );
   }
 
+  return <ProductDetails key={product.slug || product.id} product={product} />;
+}
+
+function ProductDetails({ product }) {
+  const [activeIdx, setActiveIdx] = useState(0);
+  const [variantId, setVariantId] = useState(() => product.variants?.[0]?.id || "");
+  const variants = product.variants || [];
+  const selectedVariant = variants.find((variant) => variant.id === variantId) || variants[0] || null;
+  const images = product.images?.length ? product.images : [];
+  const activeImage = images[activeIdx] || images[0] || "";
+
   return (
     <SiteLayout>
       <section className="page-hero">
         <div className="page-hero-inner">
-          <h1>{product.title}</h1>
-          <p>{product.shortDescription || ""}</p>
+          <PageHeading>
+            <h1>{product.title}</h1>
+            <p>{product.shortDescription || ""}</p>
+          </PageHeading>
         </div>
       </section>
 

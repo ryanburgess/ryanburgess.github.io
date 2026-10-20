@@ -1,3 +1,4 @@
+import PageHeading from "../components/PageHeading";
 import SiteLayout from "../layout/SiteLayout";
 import { useEffect, useMemo, useState } from "react";
 import { Link, useParams } from "react-router-dom";
@@ -86,8 +87,10 @@ export default function ProductCatalog() {
     <SiteLayout>
       <section className="page-hero">
         <div className="page-hero-inner">
-          <h1>{title}</h1>
-          <p>{subtitle}</p>
+          <PageHeading>
+            <h1>{title}</h1>
+            <p>{subtitle}</p>
+          </PageHeading>
         </div>
       </section>
 

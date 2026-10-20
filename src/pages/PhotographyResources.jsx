@@ -1,3 +1,4 @@
+import PageHeading from "../components/PageHeading";
 import { useEffect, useMemo, useRef, useState } from "react";
 import SiteLayout from "../layout/SiteLayout";
 import {
@@ -165,10 +166,12 @@ export default function PhotographyResources() {
     <SiteLayout>
       <section className="page-hero photography-resources-hero">
         <div className="page-hero-inner">
-          <span className="resource-eyebrow">Community collection</span>
-          <h1>Photography Resources</h1>
-          <p>Useful tools, references, and learning materials for photographers.</p>
-          <a className="photography-resources-cta" href="#contribute-resources">Contribute resources</a>
+          <PageHeading>
+            <span className="resource-eyebrow">Community collection</span>
+            <h1>Photography Resources</h1>
+            <p>Useful tools, references, and learning materials for photographers.</p>
+            <a className="photography-resources-cta" href="#contribute-resources">Contribute resources</a>
+          </PageHeading>
         </div>
       </section>
 

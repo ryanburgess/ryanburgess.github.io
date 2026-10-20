@@ -1,3 +1,4 @@
+import PageHeading from "../components/PageHeading";
 import SiteLayout from "../layout/SiteLayout";
 
 export default function About() {
@@ -5,11 +6,13 @@ export default function About() {
     <SiteLayout>
       <section className="page-hero">
         <div className="page-hero-inner">
-          <h1>About</h1>
-          <p>
-            I’m Ryan — I photograph color, street moments, and everyday life.
-            This site is where I share my portfolio and releases.
-          </p>
+          <PageHeading>
+            <h1>About</h1>
+            <p>
+              I’m Ryan — I photograph color, street moments, and everyday life.
+              This site is where I share my portfolio and releases.
+            </p>
+          </PageHeading>
         </div>
       </section>
 

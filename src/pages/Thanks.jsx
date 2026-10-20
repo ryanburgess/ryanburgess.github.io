@@ -1,3 +1,4 @@
+import PageHeading from "../components/PageHeading";
 import { Link } from "react-router-dom";
 import SiteLayout from "../layout/SiteLayout";
 
@@ -6,8 +7,10 @@ export default function Thanks() {
     <SiteLayout>
       <section className="page-hero">
         <div className="page-hero-inner">
-          <h1>Thanks</h1>
-          <p>Your message has been sent.</p>
+          <PageHeading>
+            <h1>Thanks</h1>
+            <p>Your message has been sent.</p>
+          </PageHeading>
         </div>
       </section>
 

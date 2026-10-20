@@ -1,3 +1,4 @@
+import PageHeading from "../components/PageHeading";
 import { useEffect, useMemo, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import SiteLayout from "../layout/SiteLayout";
@@ -48,7 +49,7 @@ export default function ResourceDetail() {
       <SiteLayout>
         <section className="resource-not-found">
           <span className="resource-eyebrow">404</span>
-          <h1>Resource not found</h1>
+          <PageHeading><h1>Resource not found</h1></PageHeading>
           <p>The guide may have moved or is no longer available.</p>
           <Link className="btn btn-primary" to="/resources">Browse resources</Link>
         </section>
@@ -65,7 +66,7 @@ export default function ResourceDetail() {
             <span>{resource.category}</span>
             <span>{resource.readTime}</span>
           </div>
-          <h1>{resource.title}</h1>
+          <PageHeading><h1>{resource.title}</h1></PageHeading>
           <p className="resource-deck">{resource.excerpt}</p>
         </header>
 
