@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import SiteLayout from "../layout/SiteLayout";
 
-const effectiveDate = "October 19, 2026";
+const effectiveDate = "October 20, 2026";
 
 function ExternalLink({ href, children }) {
   return <a href={href} target="_blank" rel="noopener noreferrer">{children}</a>;
@@ -16,301 +16,177 @@ function LegalPage({ title, children }) {
 
   return (
     <SiteLayout showNewsletter={false}>
-      <section className="legal-hero">
-        <div className="legal-container">
-          <span className="legal-product-name">Simple Sunset</span>
-          <h1>{title}</h1>
-          <p>Effective date: {effectiveDate}</p>
-        </div>
-      </section>
-      <section className="legal-page">
-        <article className="legal-container legal-content">{children}</article>
-      </section>
+      <section className="legal-hero"><div className="legal-container">
+        <span className="legal-product-name">Simple Sunset</span>
+        <h1>{title}</h1>
+        <p>Effective date: {effectiveDate}</p>
+      </div></section>
+      <section className="legal-page"><article className="legal-container legal-content">{children}</article></section>
     </SiteLayout>
   );
 }
 
+function ContactDetails({ intro }) {
+  return <><p>{intro}</p><address>
+    Ryan Burgess<br />
+    Email: <a href="mailto:support@ryanburgess.com">support@ryanburgess.com</a><br />
+    Website: <a href="https://ryanburgess.com">ryanburgess.com</a>
+  </address></>;
+}
+
 export function SimpleSunsetPrivacy() {
-  return (
-    <LegalPage title="Privacy Policy">
-      <p>Simple Sunset is a photography forecast application created and operated by Ryan Burgess (“Simple Sunset,” “we,” “us,” or “our”). This Privacy Policy explains how information is handled when you use the Simple Sunset iOS application.</p>
+  return <LegalPage title="Privacy Policy">
+    <p>Simple Sunset is a photography forecast application created by Ryan Burgess. This Privacy Policy explains how Simple Sunset handles information when you use the application.</p>
 
-      <h2>Summary</h2>
-      <p>Simple Sunset is designed to minimize data collection.</p>
-      <ul>
-        <li>We do not require you to create an account.</li>
-        <li>We do not sell your personal information.</li>
-        <li>We do not use advertising SDKs.</li>
-        <li>We do not track you across apps or websites.</li>
-        <li>We do not use third-party analytics SDKs.</li>
-        <li>Your precise device location is not stored by Simple Sunset or transmitted to our forecast providers.</li>
-        <li>App preferences and locally recorded prediction history remain on your device.</li>
-      </ul>
+    <h2>Information Simple Sunset Handles</h2>
+    <p>Simple Sunset does not require an account and does not collect your name, email address, payment information, contacts, photos, or advertising identifiers.</p>
+    <p>The app does not contain third-party advertising, behavioral analytics, or tracking technology.</p>
 
-      <h2>Information handled by the app</h2>
-      <h3>Location</h3>
-      <p>With your permission, Simple Sunset can access your device’s approximate current location while you are using the app.</p>
-      <p>Your location is used to determine which supported forecast city is nearest to you. Simple Sunset does not continuously monitor your location and does not use background location tracking.</p>
-      <p>Your device’s current coordinates are not saved to our servers. Once the nearest supported city is determined, the app uses that city’s predefined coordinates when requesting weather information.</p>
-      <p>You can decline location permission and select a city manually. You can also change or revoke location permission at any time in iOS Settings.</p>
+    <h3>Location</h3>
+    <p>If you grant location permission, Simple Sunset temporarily accesses your device’s location to determine which supported forecast city is closest to you.</p>
+    <p>Your precise device location:</p>
+    <ul>
+      <li>Is processed on your device.</li><li>Is not stored by Ryan Burgess.</li>
+      <li>Is not transmitted to Ryan Burgess.</li><li>Is not sold or used for advertising.</li>
+    </ul>
+    <p>After identifying the closest supported city, the app uses that city’s predefined coordinates when requesting weather information. These predefined city coordinates are not your precise device location.</p>
+    <p>Location access is optional. You may deny permission and select a city manually. You can change location permission at any time in the iOS Settings application.</p>
 
-      <h3>Selected city and preferences</h3>
-      <p>Simple Sunset stores preferences on your device, including:</p>
-      <ul>
-        <li>Your selected and default city</li>
-        <li>Temperature units</li>
-        <li>Chart display preferences</li>
-        <li>Notification preferences</li>
-        <li>Notification score threshold</li>
-        <li>Whether initial permission prompts have been completed</li>
-      </ul>
-      <p>These settings are stored locally using Apple-provided storage.</p>
+    <h3>Notifications</h3>
+    <p>If you grant notification permission and enable forecast alerts, Simple Sunset schedules local notifications on your device for qualifying sunrise or sunset predictions.</p>
+    <p>Notification preferences and scheduled notifications remain on your device. Simple Sunset does not use a remote push-notification service and does not send notification information to Ryan Burgess.</p>
+    <p>You can disable individual alerts in Simple Sunset or revoke notification permission in iOS Settings.</p>
 
-      <h3>Prediction history and cached information</h3>
-      <p>Simple Sunset stores historical sunrise and sunset prediction scores locally on your device. It may also temporarily cache forecast and weather information to improve reliability and allow recently loaded information to remain visible when a network request fails.</p>
-      <p>Local history remains on your device until you reset it from Settings or delete the app. Cached forecast information can be cleared from the app’s Settings screen.</p>
-      <p>Deleting the app removes its locally stored data, subject to normal iOS backup and restoration behavior.</p>
+    <h3>Preferences and Prediction History</h3>
+    <p>Simple Sunset stores certain information locally on your device, including:</p>
+    <ul>
+      <li>Your selected and default city.</li><li>Display preferences.</li>
+      <li>Notification preferences and score threshold.</li><li>Locally recorded sunrise and sunset prediction history.</li>
+    </ul>
+    <p>This information is used to provide the app’s features. It is not transmitted to Ryan Burgess.</p>
+    <p>You can reset locally recorded history from the app’s Settings screen. Deleting the app also removes locally stored app data, subject to standard iOS backup and restoration behavior.</p>
 
-      <h3>Notifications</h3>
-      <p>If you enable notifications, Simple Sunset schedules local notifications for eligible sunrise or sunset forecasts.</p>
-      <p>Notification preferences and pending notification schedules are stored and managed on your device. You can disable individual sunrise or sunset alerts within the app or revoke notification permission through iOS Settings.</p>
+    <h2>Third-Party Services</h2>
+    <p>Simple Sunset retrieves forecast and weather information from third-party services.</p>
+    <h3>Open-Meteo</h3>
+    <p>The app sends the latitude and longitude of your selected supported city to Open-Meteo to retrieve current weather information. Open-Meteo may receive standard network information, including your IP address and request details, according to its own practices.</p>
+    <p>Open-Meteo’s terms and privacy information are available at:</p>
+    <p><ExternalLink href="https://open-meteo.com/en/terms">Open-Meteo Terms and Privacy</ExternalLink></p>
+    <h3>GitHub</h3>
+    <p>Sunrise and sunset prediction data is retrieved from a publicly hosted file on GitHub. GitHub may receive standard network information, such as your IP address and request metadata, under its own privacy policy.</p>
+    <p>GitHub’s Privacy Statement is available at:</p>
+    <p><ExternalLink href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub Privacy Statement</ExternalLink></p>
+    <h3>Apple</h3>
+    <p>Apple provides the operating-system services used for location permission, local notifications, application distribution, and related platform functionality. Apple handles information according to its own privacy policies.</p>
+    <p>Apple’s Privacy Policy is available at:</p>
+    <p><ExternalLink href="https://www.apple.com/legal/privacy/">Apple Privacy Policy</ExternalLink></p>
 
-      <h3>Subscription information</h3>
-      <p>Subscriptions and payments are processed by Apple through the App Store. Simple Sunset does not receive or store your payment-card information.</p>
-      <p>The app receives transaction information from Apple that is necessary to determine whether you have an active subscription. This can include the subscription product, entitlement status, and expiration date.</p>
-      <p>Apple’s handling of App Store and subscription information is governed by Apple’s privacy policies:</p>
-      <p><ExternalLink href="https://www.apple.com/legal/privacy/data/en/appstore/">Apple App Store Privacy</ExternalLink></p>
+    <h2>Data Sharing and Sale</h2>
+    <p>Ryan Burgess does not sell, rent, or share personal information collected through Simple Sunset for advertising or marketing purposes.</p>
+    <p>Because Simple Sunset does not operate user accounts or a developer-controlled analytics service, Ryan Burgess does not maintain a server-side profile of app users.</p>
 
-      <h2>Third-party services</h2>
-      <p>Simple Sunset communicates with the following services to provide forecasts:</p>
-      <h3>Open-Meteo</h3>
-      <p>The app sends the predefined latitude and longitude of your selected supported city to Open-Meteo to retrieve current weather conditions. It does not send your precise device location.</p>
-      <p>Open-Meteo may receive ordinary technical information associated with an internet request, such as an IP address, according to its own policies.</p>
-      <p><ExternalLink href="https://open-meteo.com/">Open-Meteo</ExternalLink></p>
+    <h2>Data Retention</h2>
+    <p>App preferences and locally recorded prediction history remain on your device until you reset them, delete the app, or iOS removes the data.</p>
+    <p>Third-party service providers may retain network request information according to their own policies and retention practices.</p>
 
-      <h3>GitHub</h3>
-      <p>Current sunrise and sunset prediction information is retrieved from a publicly hosted GitHub data file. GitHub may process ordinary network-request information, including an IP address, according to its privacy statement.</p>
-      <p><ExternalLink href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub Privacy Statement</ExternalLink></p>
+    <h2>Security</h2>
+    <p>Simple Sunset uses encrypted HTTPS connections when retrieving weather and prediction information. However, no method of electronic transmission or storage can be guaranteed to be completely secure.</p>
 
-      <h3>Apple</h3>
-      <p>Apple provides App Store distribution, StoreKit subscription processing, offer-code redemption, purchase restoration, and notification services. Apple handles information associated with these services under its own privacy policies.</p>
-      <p><ExternalLink href="https://www.apple.com/legal/privacy/">Apple Privacy Policy</ExternalLink></p>
-      <p>These third-party services operate under their own terms and privacy practices. We do not control their independent data-handling practices.</p>
+    <h2>Children’s Privacy</h2>
+    <p>Simple Sunset is intended for a general audience and does not knowingly collect personal information from children.</p>
 
-      <h2>Information we do not collect</h2>
-      <p>Simple Sunset does not intentionally collect:</p>
-      <ul>
-        <li>Your name</li>
-        <li>Your email address</li>
-        <li>Your contacts</li>
-        <li>Photos or photo-library contents</li>
-        <li>Advertising identifiers</li>
-        <li>Health or financial information</li>
-        <li>Precise location history</li>
-        <li>User-generated content</li>
-        <li>Cross-app or cross-website activity</li>
-      </ul>
-      <p>The current version does not include advertising, behavioral profiling, or third-party analytics.</p>
+    <h2>Your Choices</h2>
+    <p>You can:</p>
+    <ul>
+      <li>Use the app without granting location access.</li><li>Select a city manually.</li>
+      <li>Disable sunrise or sunset notifications.</li><li>Change the notification score threshold.</li>
+      <li>Revoke location or notification permission through iOS Settings.</li>
+      <li>Reset locally recorded prediction history.</li><li>Delete the app and its locally stored data.</li>
+    </ul>
 
-      <h2>How information is used</h2>
-      <p>Information handled by Simple Sunset is used to:</p>
-      <ul>
-        <li>Select the nearest supported forecast city</li>
-        <li>Retrieve weather and prediction information</li>
-        <li>Calculate photography forecast scores</li>
-        <li>Save your preferences</li>
-        <li>Maintain local prediction history</li>
-        <li>Schedule notifications you request</li>
-        <li>Verify subscription access</li>
-        <li>Diagnose failures directly reported by you</li>
-      </ul>
-      <p>We do not sell or rent information or use it for targeted advertising.</p>
+    <h2>Changes to This Policy</h2>
+    <p>This Privacy Policy may be updated as Simple Sunset changes. The effective date at the top of this page will be revised when material changes are made.</p>
 
-      <h2>Retention and deletion</h2>
-      <p>Preferences and prediction history stored by Simple Sunset remain locally on your device until you reset them or delete the app.</p>
-      <p>You can:</p>
-      <ul>
-        <li>Clear cached prediction and weather data from Settings</li>
-        <li>Reset locally recorded history from Settings</li>
-        <li>Disable location or notification access through iOS Settings</li>
-        <li>Delete all locally stored app data by deleting the app</li>
-      </ul>
-      <p>Simple Sunset does not currently maintain user accounts or a server-side personal-information database. Because there is no Simple Sunset account, there is generally no server-side account data for us to delete.</p>
-      <p>Apple and external forecast providers may retain information they independently process according to their own policies and legal obligations.</p>
-
-      <h2>Security</h2>
-      <p>We use the security features provided by iOS and HTTPS network connections when communicating with forecast services. However, no electronic storage or transmission system can be guaranteed to be completely secure.</p>
-
-      <h2>Children’s privacy</h2>
-      <p>Simple Sunset is not directed to children under 13, and we do not knowingly collect personal information from children.</p>
-      <p>If you believe a child has provided personal information to us, contact us so we can review the situation.</p>
-
-      <h2>International use</h2>
-      <p>Forecast services and third-party providers may process network requests in countries other than your own. Their handling of information is governed by their respective privacy policies and applicable law.</p>
-
-      <h2>Changes to this policy</h2>
-      <p>We may update this Privacy Policy as Simple Sunset changes. The updated policy will be posted on this page with a revised effective date.</p>
-      <p>Material changes may also be communicated through the app or its App Store listing when appropriate.</p>
-
-      <h2>Contact</h2>
-      <p>For privacy questions or requests, contact:</p>
-      <address>Ryan Burgess<br />Email: <a href="mailto:support@ryanburgess.com">support@ryanburgess.com</a><br />Website: <a href="https://ryanburgess.com">ryanburgess.com</a></address>
-
-      <h2>Your rights</h2>
-      <p>Depending on where you live, you may have rights concerning personal information, including access, correction, deletion, or restriction.</p>
-      <p>Because Simple Sunset does not currently operate user accounts or maintain a server-side personal-information database, most app information can be controlled directly on your device. You may contact us if you have additional privacy questions.</p>
-    </LegalPage>
-  );
+    <h2>Contact</h2>
+    <ContactDetails intro="If you have questions about this Privacy Policy or Simple Sunset’s privacy practices, contact Ryan Burgess through:" />
+  </LegalPage>;
 }
 
 export function SimpleSunsetTerms() {
-  return (
-    <LegalPage title="Terms of Use">
-      <p>These Terms of Use (“Terms”) govern your use of the Simple Sunset iOS application (“Simple Sunset” or the “App”), provided by Ryan Burgess (“we,” “us,” or “our”).</p>
-      <p>By downloading, subscribing to, or using Simple Sunset, you agree to these Terms.</p>
+  return <LegalPage title="Terms of Use">
+    <p>These Terms of Use govern your use of the Simple Sunset application. By downloading or using Simple Sunset, you agree to these Terms.</p>
+    <p>Simple Sunset is created and operated by Ryan Burgess.</p>
 
-      <h2>1. The service</h2>
-      <p>Simple Sunset provides photography-oriented sunrise, sunset, weather, and lighting forecasts for supported locations.</p>
-      <p>Features may include:</p>
-      <ul>
-        <li>Sunrise and sunset times</li>
-        <li>Sunrise and sunset prediction scores</li>
-        <li>Historical prediction information</li>
-        <li>Current weather conditions</li>
-        <li>Photography condition scores</li>
-        <li>Suggested shooting windows</li>
-        <li>Forecast notifications</li>
-        <li>Location-based selection of a supported city</li>
-      </ul>
-      <p>The App is intended as a planning and creative-guidance tool.</p>
+    <h2>The Service</h2>
+    <p>Simple Sunset provides sunrise, sunset, weather, prediction-score, historical-score, and photography-guidance information for supported locations.</p>
+    <p>The application is currently provided free of charge. There are no subscriptions or in-app purchases in this version of the application.</p>
 
-      <h2>2. Forecast limitations</h2>
-      <p>Weather, lighting, visibility, sunrise, sunset, and photography scores are estimates based on third-party data and automated calculations.</p>
-      <p>Actual conditions can change quickly and may differ from the information shown in the App. We do not guarantee the accuracy, completeness, availability, or timeliness of any forecast, score, notification, or suggested shooting window.</p>
-      <p>Simple Sunset must not be relied upon for:</p>
-      <ul>
-        <li>Emergency decisions</li>
-        <li>Navigation</li>
-        <li>Aviation or marine activity</li>
-        <li>Public safety</li>
-        <li>Severe-weather warnings</li>
-        <li>Medical or health decisions</li>
-        <li>Any situation where inaccurate information could cause injury, death, or property damage</li>
-      </ul>
-      <p>Always use appropriate official weather, emergency, and safety resources.</p>
+    <h2>Forecasts Are Guidance</h2>
+    <p>All predictions, weather information, photography scores, suggested shooting windows, and related recommendations are provided for general informational and creative-planning purposes only.</p>
+    <p>Forecasts can be incomplete, delayed, inaccurate, or affected by changing conditions. Simple Sunset does not guarantee:</p>
+    <ul>
+      <li>Weather conditions.</li><li>Visibility or lighting conditions.</li><li>Sunrise or sunset quality.</li>
+      <li>Photographic results.</li><li>The availability or accuracy of third-party data.</li>
+      <li>That a notification will be delivered at a particular time.</li>
+    </ul>
+    <p>You are responsible for checking current local conditions and exercising your own judgment before traveling or participating in outdoor activities.</p>
 
-      <h2>3. Subscriptions</h2>
-      <p>Simple Sunset requires an active auto-renewable subscription to access its primary features.</p>
-      <p>The available subscription options may include:</p>
-      <ul>
-        <li>Monthly subscription: currently $2.99 per month</li>
-        <li>Annual subscription: currently $19.99 per year</li>
-      </ul>
-      <p>Prices may vary by country, currency, taxes, and future pricing changes. The price displayed by Apple at the time of purchase controls.</p>
+    <h2>Safety</h2>
+    <p>Do not rely on Simple Sunset for emergency, navigation, aviation, maritime, medical, or other safety-critical decisions.</p>
+    <p>When photographing outdoors, remain aware of weather, traffic, terrain, tides, wildlife, property boundaries, closures, and other hazards. Follow applicable laws, posted rules, and instructions from local authorities.</p>
 
-      <h3>Free trial</h3>
-      <p>Eligible new subscribers may receive a seven-day free trial with the monthly subscription.</p>
-      <p>Trial eligibility is determined by Apple. Generally, only one introductory offer is available per Apple subscription group. If you are not eligible, Apple will display the price that will be charged before you confirm the purchase.</p>
-      <p>Unless canceled before the trial ends, the subscription automatically converts to the paid monthly subscription shown during purchase.</p>
+    <h2>Location and Notifications</h2>
+    <p>Location access is optional and is used to identify the nearest supported forecast city. If a suitable city is unavailable, you may select another supported city manually.</p>
+    <p>Notifications are optional. You are responsible for configuring notification permissions and preferences. Device settings, operating-system behavior, network availability, and changing prediction data may affect whether or when a notification appears.</p>
 
-      <h3>Billing and renewal</h3>
-      <p>Payment is charged to your Apple Account.</p>
-      <p>Subscriptions renew automatically unless canceled at least 24 hours before the end of the current subscription or trial period. Apple may charge your account for renewal within 24 hours before the current period ends.</p>
-      <p>You can view, cancel, or manage your subscription through your Apple Account subscription settings:</p>
-      <p><ExternalLink href="https://apps.apple.com/account/subscriptions">Manage Apple subscriptions</ExternalLink></p>
-      <p>Deleting Simple Sunset does not automatically cancel a subscription.</p>
+    <h2>Third-Party Data and Services</h2>
+    <p>Simple Sunset uses data or infrastructure provided by third parties, including Open-Meteo and GitHub.</p>
+    <p>These services are operated independently and may change, delay, restrict, or discontinue their services without notice. Their own terms and privacy policies apply to their services.</p>
+    <p>Ryan Burgess does not control and is not responsible for the availability, accuracy, security, or practices of third-party services.</p>
 
-      <h3>Annual subscription</h3>
-      <p>The annual subscription is billed when you confirm the purchase and automatically renews each year unless canceled before renewal. The annual plan does not currently include a free trial unless Apple displays a separate eligible offer during purchase.</p>
+    <h2>Intellectual Property</h2>
+    <p>Simple Sunset, including its name, logo, design, interface, original text, photography-scoring methods, and application code, is owned by Ryan Burgess or used with permission and is protected by applicable intellectual-property laws.</p>
+    <p>You may use the application for personal, lawful purposes. You may not copy, modify, distribute, sell, sublicense, reverse engineer, or exploit the application except where applicable law expressly permits it.</p>
+    <p>Third-party names, data, and trademarks remain the property of their respective owners.</p>
 
-      <h3>Offer codes</h3>
-      <p>We may provide subscription offer codes. Eligibility, duration, pricing, expiration, and renewal behavior are displayed by Apple when the code is redeemed.</p>
-      <p>Unless an offer explicitly states that it will not renew, a subscription obtained through an offer code may automatically renew at the standard price after the offer period.</p>
+    <h2>Acceptable Use</h2>
+    <p>You agree not to:</p>
+    <ul>
+      <li>Use Simple Sunset for unlawful purposes.</li><li>Attempt to interfere with or disrupt the app or its data sources.</li>
+      <li>Attempt to gain unauthorized access to systems connected to the app.</li>
+      <li>Misrepresent Simple Sunset’s forecasts as guaranteed professional or safety advice.</li>
+      <li>Use automated methods to abuse or place unreasonable demand on the app’s third-party services.</li>
+    </ul>
 
-      <h3>Restoration and refunds</h3>
-      <p>You can restore eligible purchases through the App’s Restore Purchases control.</p>
-      <p>Apple processes all payments and refund requests. We do not independently issue App Store refunds. Refund availability is determined by Apple and applicable law.</p>
-      <p>You can request assistance from Apple at:</p>
-      <p><ExternalLink href="https://reportaproblem.apple.com/">Report a Problem to Apple</ExternalLink></p>
+    <h2>Availability and Changes</h2>
+    <p>Simple Sunset may be updated, modified, suspended, or discontinued at any time. Features, supported cities, data sources, forecast methods, and system requirements may change.</p>
+    <p>Ryan Burgess is not obligated to maintain any particular feature or continue supporting any particular location or device.</p>
 
-      <h2>4. Location and notifications</h2>
-      <p>Location access is optional. If permission is granted, Simple Sunset uses your current location to identify the nearest supported forecast city.</p>
-      <p>Not every location is supported. If your location is outside the supported range, the App may ask you to select another city or use a default city.</p>
-      <p>Notifications are optional. Delivery time is not guaranteed and may be affected by device settings, network conditions, operating-system behavior, power settings, or changes in forecast information.</p>
-      <p>You remain responsible for checking current conditions directly.</p>
+    <h2>Disclaimer of Warranties</h2>
+    <p>To the fullest extent permitted by law, Simple Sunset is provided “as is” and “as available,” without warranties of any kind, express or implied.</p>
+    <p>Ryan Burgess disclaims warranties including merchantability, fitness for a particular purpose, accuracy, availability, reliability, and non-infringement.</p>
+    <p>Some jurisdictions do not permit certain warranty exclusions, so portions of this section may not apply to you.</p>
 
-      <h2>5. Acceptable use</h2>
-      <p>You agree not to:</p>
-      <ul>
-        <li>Reverse engineer or attempt to extract the App’s source code except where applicable law expressly permits it</li>
-        <li>Interfere with or disrupt the App or its supporting services</li>
-        <li>Circumvent subscription or entitlement checks</li>
-        <li>Use automated systems to place unreasonable loads on forecast providers</li>
-        <li>Use the App for unlawful, fraudulent, or abusive purposes</li>
-        <li>Misrepresent yourself as affiliated with Simple Sunset</li>
-        <li>Copy, redistribute, or commercially exploit App content except as permitted by law</li>
-      </ul>
+    <h2>Limitation of Liability</h2>
+    <p>To the fullest extent permitted by law, Ryan Burgess will not be liable for indirect, incidental, special, consequential, or punitive damages arising from your use of, or inability to use, Simple Sunset.</p>
+    <p>This includes loss or damage connected with travel decisions, missed photographic opportunities, inaccurate forecasts, changing weather, unavailable data, missed notifications, device behavior, or reliance on photography guidance.</p>
+    <p>Where liability cannot legally be excluded, it will be limited to the minimum amount permitted by applicable law.</p>
 
-      <h2>6. Intellectual property</h2>
-      <p>Simple Sunset, including its design, branding, logo, interface, original text, calculations, and software, is owned by Ryan Burgess or used with permission.</p>
-      <p>These Terms provide you with a limited, personal, nonexclusive, nontransferable, and revocable right to use the App for its intended purpose. They do not transfer ownership of the App or its intellectual property to you.</p>
-      <p>Weather, prediction, Apple, GitHub, Open-Meteo, and other third-party content or trademarks remain the property of their respective owners.</p>
+    <h2>Indemnification</h2>
+    <p>To the extent permitted by law, you agree to indemnify and hold Ryan Burgess harmless from claims, damages, liabilities, and expenses arising from your unlawful use of Simple Sunset or your violation of these Terms.</p>
 
-      <h2>7. Third-party services</h2>
-      <p>Simple Sunset depends on third-party services, including Apple, Open-Meteo, and GitHub.</p>
-      <p>Those services may be unavailable, delayed, changed, or discontinued without notice. Your use of third-party services may also be governed by their own terms and policies.</p>
-      <p>We are not responsible for third-party services, their availability, or their independent acts and omissions.</p>
+    <h2>Apple</h2>
+    <p>These Terms are between you and Ryan Burgess, not Apple. Apple is not responsible for Simple Sunset or its content, maintenance, support, or warranties, except as required by applicable law or Apple’s platform terms.</p>
+    <p>Your use of the application must also comply with applicable App Store terms.</p>
 
-      <h2>8. Changes to the App</h2>
-      <p>We may add, modify, suspend, or discontinue App features at any time.</p>
-      <p>Supported locations, forecast calculations, data sources, notification behavior, subscription offerings, and prices may change. When required, subscription-price changes will be communicated and handled through Apple.</p>
-      <p>We do not guarantee that every feature will remain available indefinitely.</p>
+    <h2>Governing Law</h2>
+    <p>These Terms are governed by the laws of the State of California, without regard to conflict-of-law principles, except where the laws of your jurisdiction require otherwise.</p>
 
-      <h2>9. Disclaimer of warranties</h2>
-      <p>To the maximum extent permitted by applicable law, Simple Sunset is provided “as is” and “as available.”</p>
-      <p>We disclaim all warranties, express or implied, including warranties of merchantability, fitness for a particular purpose, accuracy, reliability, availability, and noninfringement.</p>
-      <p>We do not warrant that the App will be uninterrupted, error-free, secure, or compatible with every device or operating-system version.</p>
-      <p>Some jurisdictions do not permit certain warranty exclusions, so portions of this section may not apply to you.</p>
+    <h2>Changes to These Terms</h2>
+    <p>These Terms may be updated as Simple Sunset evolves. The effective date at the top of this page will be revised when changes are made.</p>
+    <p>Continued use of Simple Sunset after updated Terms become effective constitutes acceptance of the updated Terms, to the extent permitted by law.</p>
 
-      <h2>10. Limitation of liability</h2>
-      <p>To the maximum extent permitted by applicable law, Ryan Burgess will not be liable for indirect, incidental, special, consequential, or punitive damages arising from or related to:</p>
-      <ul>
-        <li>Your use of or inability to use Simple Sunset</li>
-        <li>Reliance on a forecast, score, notification, or shooting-window recommendation</li>
-        <li>Missed photographic opportunities</li>
-        <li>Travel, equipment, or other expenses</li>
-        <li>Third-party services or data</li>
-        <li>Loss of data or interruption of service</li>
-      </ul>
-      <p>Nothing in these Terms excludes liability that cannot lawfully be excluded.</p>
-
-      <h2>11. Indemnification</h2>
-      <p>To the extent permitted by law, you agree to indemnify and hold Ryan Burgess harmless from claims, damages, liabilities, and expenses arising from your unlawful use of the App, your violation of these Terms, or your infringement of another person’s rights.</p>
-      <p>This section does not apply where prohibited by applicable consumer law.</p>
-
-      <h2>12. Termination</h2>
-      <p>You may stop using Simple Sunset at any time. Subscription cancellation must be completed through Apple.</p>
-      <p>We may suspend or terminate access where reasonably necessary to address fraud, abuse, security threats, legal obligations, or material violations of these Terms.</p>
-      <p>Sections that by their nature should survive termination will remain effective, including intellectual-property, disclaimer, liability, and dispute provisions.</p>
-
-      <h2>13. Governing law</h2>
-      <p>These Terms are governed by the laws of the State of California, without regard to conflict-of-law rules.</p>
-      <p>If the law where you live provides mandatory consumer protections or gives you the right to bring a claim in your local courts, those protections and rights are not limited by these Terms.</p>
-
-      <h2>14. Apple terms</h2>
-      <p>Your use of Simple Sunset is also subject to Apple’s applicable App Store terms and the Apple Standard Licensed Application End User License Agreement:</p>
-      <p><ExternalLink href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Apple Standard EULA</ExternalLink></p>
-      <p>If these Terms conflict with mandatory Apple terms governing the App Store transaction or license, the applicable Apple terms control to the extent of that conflict.</p>
-      <p>Apple is not responsible for providing maintenance or support for Simple Sunset except as required by applicable law.</p>
-
-      <h2>15. Changes to these Terms</h2>
-      <p>We may update these Terms to reflect changes to Simple Sunset, subscriptions, legal requirements, or business practices.</p>
-      <p>Updated Terms will be posted on this page with a revised effective date. Continued use of the App after updated Terms become effective constitutes acceptance where permitted by law.</p>
-      <p>If applicable law requires additional notice or consent, we will provide it.</p>
-
-      <h2>16. Contact</h2>
-      <p>Questions about these Terms or Simple Sunset can be directed to:</p>
-      <address>Ryan Burgess<br />Email: <a href="mailto:support@ryanburgess.com">support@ryanburgess.com</a><br />Website: <a href="https://ryanburgess.com">ryanburgess.com</a></address>
-    </LegalPage>
-  );
+    <h2>Contact</h2>
+    <ContactDetails intro="Questions about these Terms or Simple Sunset can be submitted through:" />
+  </LegalPage>;
 }
