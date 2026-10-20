@@ -17,10 +17,19 @@ export default function Home() {
       <section className="home-hero">
         <div className="home-hero-inner">
           <div className="home-hero-copy">
-            <h1 className="home-title">
-            <span className="home-title-line">Ryan Burgess</span>
-            <span className="home-title-line home-title-accent">Photography</span>
-            </h1>
+            <div className="home-brand-lockup">
+              <img
+                className="home-brand-mark"
+                src="/images/brand/ryan-burgess-mark.png"
+                alt=""
+                width="256"
+                height="256"
+              />
+              <h1 className="home-title">
+                <span className="home-title-line">Ryan Burgess</span>
+                <span className="home-title-line home-title-accent">Photography</span>
+              </h1>
+            </div>
 
             <p className="home-subtitle">San Francisco based photographer.</p>
 

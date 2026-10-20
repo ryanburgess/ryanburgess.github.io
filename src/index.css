@@ -1118,8 +1118,21 @@ main {
   min-width: 320px;
 }
 
+.home-brand-lockup {
+  display: flex;
+  align-items: center;
+  gap: clamp(14px, 2.4vw, 26px);
+  margin-bottom: 18px;
+}
+
+.home-brand-mark {
+  width: clamp(70px, 10vw, 112px);
+  height: auto;
+  flex: 0 0 auto;
+}
+
 .home-title {
-  margin: 0 0 18px;
+  margin: 0;
   text-transform: uppercase;
   letter-spacing: 0.06em;
   line-height: 0.95;
@@ -1128,7 +1141,7 @@ main {
 .home-title-line {
   display: block;
   font-weight: 800;
-  font-size: clamp(44px, 6vw, 72px);
+  font-size: clamp(40px, 5vw, 64px);
   color: #fff;
 }
 
@@ -1172,6 +1185,25 @@ main {
   .home-hero-photo {
     width: min(520px, 100%);
     flex-basis: auto;
+  }
+}
+
+@media (max-width: 520px) {
+  .home-hero-copy {
+    min-width: 0;
+    width: 100%;
+  }
+
+  .home-brand-lockup {
+    align-items: flex-start;
+  }
+
+  .home-title-line {
+    font-size: clamp(32px, 10vw, 44px);
+  }
+
+  .home-brand-mark {
+    width: clamp(58px, 18vw, 76px);
   }
 }
 
