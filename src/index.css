@@ -334,7 +334,6 @@ main {
 /* --- Newsletter --- */
 .newsletter {
   border-top: 1px solid var(--border-subtle);
-  border-bottom: 1px solid var(--border-subtle);
   padding: 40px 20px 48px;
   background-color: #050505;
 }
