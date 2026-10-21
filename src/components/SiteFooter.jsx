@@ -2,7 +2,16 @@ export default function SiteFooter() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="site-footer">
+    <>
+      <div className="footer-brand">
+        <img
+          src="/images/brand/ryan-burgess-mark.png"
+          alt="Ryan Burgess Photography"
+          width="554"
+          height="557"
+        />
+      </div>
+      <footer className="site-footer">
       <div className="footer-left">
         <span>&copy; {year} Ryan Burgess Photography</span>
       </div>
@@ -16,5 +25,6 @@ export default function SiteFooter() {
         </a>
       </div>
     </footer>
+    </>
   );
 }

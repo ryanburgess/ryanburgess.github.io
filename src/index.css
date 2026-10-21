@@ -429,7 +429,20 @@ main {
 }
 
 /* --- Footer --- */
+.footer-brand {
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px 20px;
+}
+
+.footer-brand img {
+  display: block;
+  width: 72px;
+  height: auto;
+}
+
 .site-footer {
+  border-top: 1px solid var(--border-subtle);
   display: flex;
   flex-direction: column;
   gap: 10px;
