@@ -20,10 +20,10 @@ export default function Home() {
             <div className="home-brand-lockup">
               <img
                 className="home-brand-mark"
-                src="/images/brand/ryan-burgess-mark.png"
+                src="/images/brand/ryan-burgess-mark.jpg"
                 alt=""
-                width="256"
-                height="256"
+                width="554"
+                height="557"
               />
               <h1 className="home-title">
                 <span className="home-title-line">Ryan Burgess</span>

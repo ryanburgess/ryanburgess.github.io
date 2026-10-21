@@ -3,10 +3,10 @@ export default function PageHeading({ children }) {
     <div className="page-heading">
       <img
         className="page-heading-mark"
-        src="/images/brand/ryan-burgess-mark.png"
+        src="/images/brand/ryan-burgess-mark.jpg"
         alt=""
-        width="256"
-        height="256"
+        width="554"
+        height="557"
       />
       <div className="page-heading-copy">{children}</div>
     </div>
