@@ -18,6 +18,10 @@
       "label": "Videos"
     },
     {
+      "id": "youtube",
+      "label": "YouTube"
+    },
+    {
       "id": "podcasts",
       "label": "Podcasts"
     },
