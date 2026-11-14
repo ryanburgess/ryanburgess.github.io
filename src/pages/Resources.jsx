@@ -79,7 +79,7 @@ export default function Resources() {
           {state.status === "ready" && state.resources.length > 0 ? (
             <>
               <div className="resources-intro">
-                <p>{state.resources.length} guides for making stronger photographs.</p>
+                <p>{state.resources.length} {state.resources.length === 1 ? "guide" : "guides"} for making stronger photographs.</p>
                 <div className="resource-categories" aria-label="Resource categories">
                   {categories.map((category) => <span key={category}>{category}</span>)}
                 </div>
@@ -89,13 +89,13 @@ export default function Resources() {
                 {state.resources.map((resource) => (
                   <article className="resource-card" key={resource.slug}>
                     <Link className="resource-card-link" to={`/resources/${resource.slug}`}>
-                      <div className="resource-card-image-wrap">
+                      {resource.image ? <div className="resource-card-image-wrap">
                         <img
                           className="resource-card-image"
                           src={resource.image}
                           alt={resource.imageAlt || ""}
                         />
-                      </div>
+                      </div> : null}
                       <div className="resource-card-copy">
                         <div className="resource-card-meta">
                           <span>{resource.category}</span>

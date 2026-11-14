@@ -1,3 +1,339 @@
 {
-  "resources": []
+  "resources": [
+    {
+      "slug": "getting-started-in-photography",
+      "title": "My Advice for Anyone Getting Started in Photography",
+      "category": "Beginner guide",
+      "readTime": "10 min read",
+      "excerpt": "Ten practical tips for getting started, plus a plain-language guide to aperture, shutter speed, and ISO.",
+      "introduction": [
+        "When you’re first getting started in photography, it can feel overwhelming. There are so many cameras, lenses, settings, techniques, and opinions about what you should be doing.",
+        "But becoming a better photographer doesn’t have to be complicated.",
+        "I’ve learned a lot through years of taking photos, experimenting, making mistakes, and figuring out what works for me. I’m still learning all the time.",
+        "These are ten things I’d recommend to anyone getting started in photography, along with a simple guide to understanding some of your camera’s most important settings."
+      ],
+      "sections": [
+        {
+          "heading": "1. Take Lots of Photos. Seriously, Lots.",
+          "blocks": [
+            "The best way to improve your photography is to take photos. A lot of them.",
+            "Don’t wait for the perfect location, perfect lighting, or perfect subject. Get outside, bring your camera, and start photographing whatever catches your attention.",
+            "The more photos you take, the more opportunities you have to experiment, make mistakes, and discover what works.",
+            "One of the most valuable things I’ve done for my photography was challenging myself to take photos every single day for a year. It pushed me to find interesting things in ordinary places and made photography part of my daily routine.",
+            "You don’t need every photo to be great. You just need to keep taking them."
+          ],
+          "id": "ten-tips",
+          "jumpLabel": "Ten tips"
+        },
+        {
+          "heading": "2. Don’t Get Caught Up in Camera Gear",
+          "blocks": [
+            "You don’t need an expensive camera or a collection of lenses to become a good photographer.",
+            "It’s easy to fall into the trap of thinking a new camera or lens will make your photos better. While equipment can certainly help in specific situations, learning how to use what you already have is far more important.",
+            "Start with one camera and get comfortable with it. Ideally, use something that allows you to adjust settings manually so you can experiment with how your camera works.",
+            "But even your phone is a great place to start. You can learn an incredible amount about composition, lighting, and finding interesting subjects without buying any additional equipment.",
+            "Focus on developing your skills before investing in more gear."
+          ]
+        },
+        {
+          "heading": "3. Learn the Exposure Triangle",
+          "blocks": [
+            "Understanding aperture, shutter speed, and ISO is one of the most useful things you can learn when starting photography.",
+            "These three settings work together to control the brightness of your photographs, but they also influence how your images look.",
+            "Aperture affects depth of field, shutter speed controls how movement is captured, and ISO helps you work in different lighting conditions.",
+            "You don’t need to master all three immediately. Start by understanding what each setting does and experiment with changing them.",
+            "Try photographing the same subject with different settings and compare the results.",
+            "I’ve included a simple explanation of these settings later in this guide."
+          ],
+          "link": {
+            "href": "#camera-settings",
+            "label": "Jump to the camera settings breakdown"
+          }
+        },
+        {
+          "heading": "4. Pay Attention to Composition",
+          "blocks": [
+            "Composition is about deciding what goes into your photograph and how everything is arranged within the frame.",
+            "Before taking a photo, think about what you’re trying to capture. What’s the subject? Is there anything distracting in the background? Would the photo look better from a different angle?",
+            "Sometimes moving a few steps to the left or right can completely change a photograph.",
+            "Experiment with getting closer to your subject, photographing from lower angles, or including more of the environment.",
+            "You can also explore techniques like leading lines, framing, symmetry, and the rule of thirds.",
+            "But don’t feel like you need to follow composition rules all the time. They’re useful tools, not requirements."
+          ]
+        },
+        {
+          "heading": "5. Learn to See Light",
+          "blocks": [
+            "Light is one of the most important elements of photography.",
+            "Start paying attention to how light changes throughout the day and how it affects the things around you.",
+            "Morning and evening sunlight can create beautiful colors and long shadows. Midday sunlight can produce strong contrast and harsh shadows. Overcast days provide softer, more even lighting.",
+            "None of these conditions is necessarily better than another. They simply create different opportunities.",
+            "Look at where the light is coming from, how it falls on your subject, and what happens in the shadows.",
+            "I personally love working with strong sunlight, bold shadows, and vibrant colors. Learning to recognize those conditions has become an important part of how I approach photography.",
+            "The more you pay attention to light, the more you’ll start noticing photographic opportunities everywhere."
+          ]
+        },
+        {
+          "heading": "6. Look Back at Your Photographs",
+          "blocks": [
+            "Taking photos is important, but reviewing them is just as valuable.",
+            "Spend time looking through the photographs you’ve taken. Don’t just focus on the ones you like.",
+            "Ask yourself why certain photos work and why others don’t.",
+            "Was the composition interesting? Was the subject in focus? Did the lighting help or hurt the image? Was there something distracting in the background?",
+            "Think about what you would do differently if you could take the photograph again.",
+            "You might discover that you consistently prefer certain compositions, lighting conditions, or subjects.",
+            "Looking back at older work can also be incredibly rewarding because it allows you to see how much you’ve improved."
+          ]
+        },
+        {
+          "heading": "7. Photograph What Interests You",
+          "blocks": [
+            "Don’t worry about finding your photography style right away.",
+            "When you’re starting out, experiment with photographing all kinds of subjects.",
+            "Try street photography, landscapes, architecture, portraits, cars, nature, or anything else that catches your attention.",
+            "Pay attention to what you enjoy photographing and what makes you excited to pick up your camera.",
+            "Over time, you’ll start noticing patterns in your work.",
+            "For me, color has become a huge part of my photography. I love finding interesting combinations of colors, architecture, and light. But that developed through years of experimenting with different subjects and approaches.",
+            "Your style doesn’t need to be something you consciously decide on. It can develop naturally through the photographs you enjoy making."
+          ]
+        },
+        {
+          "heading": "8. Experiment With Editing",
+          "blocks": [
+            "Editing is another important part of the creative process.",
+            "Taking a photograph is only one part of creating the final image. Editing allows you to refine how the photograph looks and feels.",
+            "Start by experimenting with simple adjustments like exposure, contrast, highlights, shadows, white balance, and color.",
+            "Pay attention to how each adjustment changes your photograph.",
+            "You don’t need expensive editing software to get started. There are plenty of tools available, including free options.",
+            "Presets can be useful, but I’d encourage you to learn what the individual adjustments actually do rather than relying entirely on someone else’s editing style.",
+            "Over time, editing can become another way to develop your own creative approach to photography."
+          ]
+        },
+        {
+          "heading": "9. Study Other Photographers",
+          "blocks": [
+            "One of the best ways to learn photography is to look at the work of other photographers.",
+            "Find photographers whose work you admire and spend time studying their images.",
+            "Instead of simply thinking a photograph looks great, ask yourself why.",
+            "Is it the composition? The lighting? The colors? The subject? The moment they captured?",
+            "Look at how different photographers approach similar subjects and what makes their work unique.",
+            "Photography books, exhibitions, websites, and social media can all be great sources of inspiration.",
+            "Don’t feel like you need to copy someone else’s style. Use their work to discover new techniques, ideas, and ways of seeing the world."
+          ]
+        },
+        {
+          "heading": "10. Enjoy the Process",
+          "blocks": [
+            "Photography should be something you enjoy.",
+            "It’s easy to get caught up in comparing your photographs to other people’s work, worrying about social media engagement, or feeling like every photo needs to be amazing.",
+            "Try not to let those things take away from the experience.",
+            "Go somewhere new. Explore your neighborhood. Take photos of ordinary things. Experiment with techniques you’ve never tried before.",
+            "Some days you’ll come home with photographs you love. Other days you might not get anything worth keeping.",
+            "That’s all part of the process.",
+            "You don’t need to share every photograph you take, and you don’t need every photography outing to produce something incredible.",
+            "Just keep exploring, experimenting, and enjoying the experience of making photographs."
+          ]
+        },
+        {
+          "heading": "Understanding Your Camera’s Settings",
+          "blocks": [
+            "If you’re new to photography, camera settings can seem intimidating. You’ll see terms like aperture, shutter speed, ISO, and exposure, along with a bunch of numbers that might not mean much at first.",
+            "The good news is that you don’t need to understand every camera setting to start taking great photographs.",
+            "Three of the most important settings to learn are aperture, shutter speed, and ISO. Together, they’re commonly called the exposure triangle.",
+            "Each setting affects the brightness of your photograph, but they also have different creative effects.",
+            "Here’s a simple breakdown."
+          ],
+          "id": "camera-settings",
+          "jumpLabel": "Camera settings",
+          "link": {
+            "href": "/guides/color-cheat-sheet",
+            "label": "Get the Color Exposure Cheat Sheet",
+            "description": "Keep this field reference handy when bright, dark, or vivid subjects throw off your camera’s meter."
+          },
+          "subsections": [
+            {
+              "heading": "Aperture",
+              "blocks": [
+                "Examples: f/1.8, f/2.8, f/4, f/8, f/16",
+                "Aperture controls the size of the opening inside your lens that allows light to reach your camera’s sensor.",
+                "A lower f-number, like f/1.8, means a wider opening that lets in more light. A higher f-number, like f/16, means a smaller opening that lets in less light.",
+                "Aperture also affects something called depth of field, which describes how much of your scene appears acceptably sharp.",
+                {
+                  "points": [
+                    "Low f-number (f/1.8): More light, shallower depth of field, and potentially blurrier backgrounds.",
+                    "Medium f-number (f/4): A balance between depth of field and light.",
+                    "High f-number (f/8–f/16): Less light and generally more of the scene appearing in focus."
+                  ]
+                },
+                "If you’re photographing a person and want a blurry background, you might choose a wider aperture like f/1.8.",
+                "If you’re photographing a landscape and want more of the scene in focus, you might choose something like f/8.",
+                "The available apertures depend on your lens."
+              ]
+            },
+            {
+              "heading": "Shutter Speed",
+              "blocks": [
+                "Examples: 1/1000, 1/500, 1/250, 1/30, 1 second",
+                "Shutter speed controls how long your camera’s sensor is exposed to light.",
+                "A fast shutter speed captures a very short moment in time, while a slow shutter speed allows light to reach the sensor for longer.",
+                "Shutter speed also determines how movement appears in your photographs.",
+                {
+                  "points": [
+                    "Fast (1/1000): Great for freezing fast-moving subjects like sports, cars, or animals.",
+                    "Medium (1/250): Useful for everyday photography and capturing people moving.",
+                    "Slow (1/30): Can introduce motion blur or camera shake, especially when shooting handheld.",
+                    "Very slow (1 second or longer): Useful for long exposures, light trails, or creative motion effects, usually with a tripod."
+                  ]
+                },
+                "For example, if you’re photographing someone riding a bicycle, a fast shutter speed can freeze them in motion.",
+                "But if you want to capture a sense of movement, a slower shutter speed can create intentional motion blur."
+              ]
+            },
+            {
+              "heading": "ISO",
+              "blocks": [
+                "Examples: ISO 100, 400, 800, 1600, 3200",
+                "ISO controls how your camera responds to the light captured by the sensor.",
+                "Increasing ISO makes your photograph brighter when aperture and shutter speed stay the same, which can be helpful when photographing in darker environments.",
+                "However, higher ISO settings can also introduce more noise, which may appear as grain or unwanted color variations in your photographs.",
+                {
+                  "points": [
+                    "ISO 100: Great for bright conditions and generally produces very clean images.",
+                    "ISO 400–800: Useful for cloudy days, shade, or moderately low-light environments.",
+                    "ISO 1600–3200+: Helpful in darker conditions when you need to maintain a faster shutter speed."
+                  ]
+                },
+                "Modern cameras can often handle higher ISO settings surprisingly well, so don’t be afraid to increase ISO when you need to.",
+                "A sharp photograph with a little noise is often better than a blurry photograph caused by using a shutter speed that’s too slow."
+              ]
+            },
+            {
+              "heading": "How the Three Settings Work Together",
+              "blocks": [
+                "Aperture, shutter speed, and ISO all influence exposure, which is how bright or dark your photograph appears.",
+                "Changing one setting often means adjusting another to maintain the brightness you want.",
+                "For example, using a faster shutter speed means less light reaches the sensor. You might compensate by using a wider aperture or increasing ISO.",
+                "The important thing to understand is that these settings aren’t just about making your photographs brighter or darker.",
+                "They’re creative tools that allow you to control depth of field, movement, and how your camera handles different lighting conditions.",
+                "You don’t need to shoot in full manual mode all the time to learn them, either.",
+                "Try using Aperture Priority (Av or A) to experiment with depth of field, or Shutter Priority (Tv or S) to explore how movement appears in your photographs.",
+                "These modes allow you to control one setting while your camera helps manage the exposure.",
+                "The more you experiment, the more intuitive these decisions will become."
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Final Thoughts",
+          "blocks": [
+            "If there’s one thing I’d encourage anyone getting started in photography to do, it’s to keep taking photos.",
+            "You don’t need the most expensive camera, you don’t need to understand every technical detail, and you certainly don’t need every photograph to be great.",
+            "Start with what you have. Take lots of photos. Experiment with your settings, pay attention to light and composition, and spend time looking back at your work.",
+            "Most importantly, photograph things that interest you and enjoy the process.",
+            "The more you practice, the more you’ll learn, and the more your own approach to photography will develop.",
+            "Now grab your camera and go take some photos."
+          ],
+          "id": "final-thoughts",
+          "jumpLabel": "Final thoughts"
+        }
+      ],
+      "callout": {
+        "heading": "Find more photography resources",
+        "description": "Browse my searchable collection of books, videos, tools, and other resources to help you keep learning.",
+        "href": "/resources/photography",
+        "label": "Explore the photography resource library"
+      }
+    },
+    {
+      "slug": "whats-in-my-camera-bag",
+      "title": "What’s in My Camera Bag",
+      "category": "Camera gear",
+      "readTime": "2 min read",
+      "excerpt": "A look at the camera, lenses, and lighting I’m using right now.",
+      "introduction": [
+        "Here’s a look at the gear I reach for most often: my current camera, three go-to lenses, and the tripod and light I use when the shoot calls for them.",
+        "This is a snapshot of what I use right now. If you’re just getting started, the camera you already have is plenty to start making photos."
+      ],
+      "sections": [
+        {
+          "heading": "Camera: Canon EOS R5",
+          "blocks": [
+            "The Canon EOS R5 is my current camera. I use a mix of RF and EF lenses, so moving to an RF body didn’t mean replacing every lens."
+          ],
+          "id": "camera",
+          "jumpLabel": "Camera",
+          "link": {
+            "href": "https://www.usa.canon.com/support/p/eos-r5",
+            "label": "Canon EOS R5 details"
+          }
+        },
+        {
+          "heading": "My go-to lenses",
+          "blocks": [
+            "I keep three focal lengths in rotation: a wide 24mm, a 50mm prime, and a 100–400mm zoom for more reach."
+          ],
+          "id": "lenses",
+          "jumpLabel": "Lenses",
+          "subsections": [
+            {
+              "heading": "Canon RF 24mm f/1.8 Macro IS STM",
+              "blocks": [
+                "The 24mm is my wide-angle option. It gives me room to show more of the street or the architecture around a subject, and it can also focus close for details."
+              ],
+              "link": {
+                "href": "https://www.usa.canon.com/shop/p/rf24mm-f1-8-macro-is-stm",
+                "label": "Canon RF 24mm f/1.8 details"
+              }
+            },
+            {
+              "heading": "Canon EF 100–400mm f/4.5–5.6L",
+              "blocks": [
+                "This is the EF version of Canon’s 100–400mm zoom. The extra reach makes it useful for picking out distant details or isolating a subject from a busy scene."
+              ]
+            },
+            {
+              "heading": "Canon EF 50mm f/1.4 USM",
+              "blocks": [
+                "This is still my go-to 50mm. It’s a useful middle ground when I want a tighter frame than the 24mm, and the f/1.4 aperture gives me room to work in lower light. I may swap to a newer 50mm later, but this is what I’m using today."
+              ],
+              "link": {
+                "href": "https://www.usa.canon.com/support/p/ef-50mm-f-1-4-usm",
+                "label": "Canon EF 50mm f/1.4 details"
+              }
+            }
+          ]
+        },
+        {
+          "heading": "Tripod: SLIK carbon fiber",
+          "blocks": [
+            "I’ve had my SLIK carbon fiber tripod for a few years. It’s the one I reach for when I need the camera to stay still, especially for slower shutter speeds."
+          ],
+          "id": "tripod",
+          "jumpLabel": "Tripod",
+          "link": {
+            "href": "https://slikusa.com/collections/carbon-fiber-tripods",
+            "label": "Browse SLIK carbon fiber tripods"
+          }
+        },
+        {
+          "heading": "Lighting: Profoto B20",
+          "blocks": [
+            "The B20 is the light I reach for when I want to add flash. It’s battery powered, which is handy when I want to set up away from an outlet."
+          ],
+          "id": "lighting",
+          "jumpLabel": "Lighting",
+          "link": {
+            "href": "https://www.profoto.com/us/en/shop/products/lights/monolights/battery-powered/profoto-b20/",
+            "label": "Profoto B20 details"
+          }
+        }
+      ],
+      "callout": {
+        "heading": "Just getting started?",
+        "description": "I put together ten tips on practicing, finding good light, and getting more comfortable with the camera you already have.",
+        "href": "/resources/getting-started-in-photography",
+        "label": "Read my beginner photography guide"
+      }
+    }
+  ]
 }

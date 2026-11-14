@@ -1736,6 +1736,44 @@ main {
   margin-top: 42px;
 }
 
+.resource-body section[id] {
+  scroll-margin-top: 100px;
+}
+
+.resource-body a:not(.btn) {
+  color: #8eb6ff;
+  text-underline-offset: 3px;
+}
+
+.resource-jump-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+  padding: 16px 0;
+  border-block: 1px solid var(--border-subtle);
+  font-size: 14px;
+}
+
+.resource-body .resource-subsection {
+  margin-top: 28px;
+}
+
+.resource-inline-photo {
+  margin: 24px 0;
+}
+
+.resource-inline-photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.resource-inline-photo figcaption {
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
 .resource-body h2,
 .resource-related h2 {
   margin: 0 0 14px;
