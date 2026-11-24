@@ -1239,8 +1239,12 @@ main {
     align-items: flex-start;
   }
 
+  .home-title {
+    min-width: 0;
+  }
+
   .home-title-line {
-    font-size: clamp(32px, 10vw, 44px);
+    font-size: clamp(20px, 6vw, 30px);
   }
 
   .home-brand-mark {
